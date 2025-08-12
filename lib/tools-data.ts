@@ -178,7 +178,8 @@ export const toolsData = [
         description: "A third-party application that uses the Infinite Flight Connect API to automate the whole process of step-climbing.",
         imageUrl: "https://global.discourse-cdn.com/infiniteflight/optimized/4X/9/8/d/98d98b01832ecae00dd9ffdc55a9d595e5192345_2_600x600.png",
         tags: ["addons"],
-        link: "https://heysaf.github.io/if-asc-wiki/usage/#quick-start"
+        link: "https://heysaf.github.io/if-asc-wiki/usage/#quick-start",
+        isLegacy: true
     },
     // VACenter
     {
@@ -390,5 +391,26 @@ export const toolsData = [
         imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/a/4/f/a4f4acb997139fad311f6dad8e5af7f6b2098823.png",
         tags: ["VA", "other"],
         link: "https://community.infiniteflight.com/t/introducing-virtual-wings-design-free-quality-websites-for-vas/975465"
+    },
+    // Infinite Stats
+    {
+        id: 39,
+        name: "Infinite Stats",
+        creator: "Stan7",
+        description: "A lightweight statistics for Infinite Flight pilots that allows you to get insights into flight hours, landings, ATC operations, and more!",
+        imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/a/4/f/a4f4acb997139fad311f6dad8e5af7f6b2098823.png",
+        tags: ["stats"],
+        link: "https://infinite-stats.vercel.app/"
+    },
+    // LiveFlight
+    {   
+        id: 40,
+        name: "LiveFlight",
+        creator: "Cameron and Team",
+        description: "The first ever Infinite Flight flight tracker on the web. App no longer supported.",
+        imageUrl: "https://avatars.githubusercontent.com/u/15328641?s=280&v=4",
+        tags: ["tracker"],
+        link: "https://liveflight.app/",
+        isLegacy: true
     }
 ]

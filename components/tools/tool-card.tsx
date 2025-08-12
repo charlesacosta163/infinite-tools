@@ -15,9 +15,10 @@ type ToolCardProps = {
     tags: string[],
     link: string,
     isBeta?: boolean
+    isLegacy?: boolean
   }
   
-  export function ToolCard({id, name, creator, description, imageUrl, tags, link, isBeta}: ToolCardProps) {
+  export function ToolCard({id, name, creator, description, imageUrl, tags, link, isBeta, isLegacy}: ToolCardProps) {
     const [isBookmarked, setIsBookmarked] = useState(false);
   
     useEffect(() => {
@@ -45,7 +46,21 @@ type ToolCardProps = {
             </div>
 
             <div className="flex flex-col">
-              <span className="font-semibold text-gray-500 flex items-center gap-2">{name} <span className="text-xs text-gray-500">{isBeta && <span className="text-xs text-orange-100 bg-orange-400 px-2 py-0.5 rounded-full">Beta</span>}</span></span>
+              <span className="font-semibold text-gray-500 flex items-center gap-2">
+                {name}
+                <span className="text-xs text-gray-500 flex gap-1">
+                  {isBeta && (
+                    <span className="text-xs text-orange-100 bg-orange-400 px-2 py-0.5 rounded-full">
+                      Beta
+                    </span>
+                  )}
+                  {isLegacy && (
+                    <span className="text-xs text-gray-100 bg-gray-400 px-2 py-0.5 rounded-full">
+                      Legacy
+                    </span>
+                  )}
+                </span>
+              </span>
               <span className="text-xs text-gray-500">by {creator}</span>
             </div>
           </div>
@@ -68,8 +83,13 @@ type ToolCardProps = {
            <div className="flex gap-2 flex-wrap">
               {tags.map(tag => <span key={tag} className="text-xs px-3 py-1 rounded-lg bg-lightOriginal text-orange-400">{capitalize(tag)}</span>)}
            </div>
-  
-           <Link href={link} target="_blank" className="flex gap-2 items-center px-3 py-1 rounded-lg bg-primaryOriginal hover:bg-accentOriginal text-lightOriginal font-bold"><LuExternalLink /> Visit</Link>
+           {
+            isLegacy ? (
+             <></>
+            ) : (
+              <Link href={link} target="_blank" className="flex gap-2 items-center px-3 py-1 rounded-lg bg-primaryOriginal hover:bg-accentOriginal text-lightOriginal font-bold"><LuExternalLink /> Visit</Link>
+            )
+           }
         </footer>
       </div>
     )

@@ -31,6 +31,7 @@ function ToolsContent() {
             tags={tool.tags} 
             link={tool.link} 
             isBeta={tool.isBeta || false}
+            isLegacy={tool.isLegacy || false}
           />
         ))}
       </section>

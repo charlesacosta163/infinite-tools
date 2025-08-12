@@ -28,11 +28,11 @@ function SearchContent() {
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
-    router.push(`/?q=${encodeURIComponent(searchQuery)}`)
+    router.push(`/search?q=${encodeURIComponent(searchQuery)}`)
   }
 
   return (
-    <div className="px-4 py-8 md:p-8 bg-secondaryOriginal rounded-4xl font-medium flex flex-col gap-6">
+    <div className="px-4 py-8 md:p-8 bg-secondaryOriginal rounded-4xl font-medium flex flex-col gap-6 h-full">
       {/* Search Section */}
       <section className="flex flex-col gap-4">
         <h1 className="text-2xl font-bold text-gray-700">Search Tools</h1>
@@ -61,31 +61,41 @@ function SearchContent() {
 
       {/* Results Section */}
       <section className="flex-1">
-        <div className="flex justify-between items-center mb-4">
-          <h2 className="text-lg font-semibold text-gray-700">
-            {query ? `Search Results (${filteredTools.length})` : 'All Tools'}
-          </h2>
-        </div>
+        {query ? (
+          <>
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-lg font-semibold text-gray-700">
+                Search Results ({filteredTools.length})
+              </h2>
+            </div>
 
-        {filteredTools.length === 0 ? (
-          <div className="flex flex-col items-center justify-center py-12 text-gray-500">
-            <p>No tools found</p>
-            <p className="text-sm mt-2">Try adjusting your search terms</p>
-          </div>
+            {filteredTools.length === 0 ? (
+              <div className="flex flex-col items-center justify-center py-12 text-gray-500">
+                <p>No tools found</p>
+                <p className="text-sm mt-2">Try adjusting your search terms</p>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {filteredTools.map((tool) => (
+                  <ToolCard 
+                    key={tool.id}
+                    id={tool.id}
+                    name={tool.name}
+                    creator={tool.creator}
+                    description={tool.description || "No description available"}
+                    imageUrl={tool.imageUrl}
+                    tags={tool.tags}
+                    link={tool.link}
+                  />
+                ))}
+              </div>
+            )}
+          </>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {filteredTools.map((tool) => (
-              <ToolCard 
-                key={tool.id}
-                id={tool.id}
-                name={tool.name}
-                creator={tool.creator}
-                description={tool.description || "No description available"}
-                imageUrl={tool.imageUrl}
-                tags={tool.tags}
-                link={tool.link}
-              />
-            ))}
+          <div className="flex flex-col items-center justify-center py-12 text-gray-500">
+            <LuSearch className="w-12 h-12 mb-4 text-accentOriginal/50" />
+            <p className="text-lg font-medium">Start searching for tools</p>
+            <p className="text-sm mt-2">Find tools by name, description, tags, or creator</p>
           </div>
         )}
       </section>
@@ -93,7 +103,7 @@ function SearchContent() {
   )
 }
 
-export default function SearchPage() {
+export default function HomePage() {
   return (
     <Suspense fallback={
       <div className="px-4 py-8 md:p-8 bg-secondaryOriginal rounded-4xl font-medium flex flex-col gap-6">
