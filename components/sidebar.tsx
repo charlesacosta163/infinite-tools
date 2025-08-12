@@ -4,14 +4,19 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation'
 import React from 'react'
 import { IoWarning } from 'react-icons/io5';
-import { LuBookmark, LuSearch, LuWrench } from "react-icons/lu";
+import { LuBookmark, LuHouse, LuSearch, LuWrench } from "react-icons/lu";
 
 import Banner from './banner';
 
 const links = [
   {
-    name: "Search",
+    name: "Home",
     path: "/",
+    icon: <LuHouse />
+  },
+  {
+    name: "Search",
+    path: "/search",
     icon: <LuSearch />
   },
   {

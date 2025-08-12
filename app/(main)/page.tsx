@@ -1,114 +1,110 @@
 'use client'
 
-import { Suspense, useState, useEffect } from 'react'
-import { useRouter, useSearchParams } from 'next/navigation'
-import { toolsData } from '@/lib/tools-data'
-import { ToolCard } from '@/components/tools/tool-card'
-import { LuSearch } from 'react-icons/lu'
+import Link from 'next/link'
+import { FaToolbox } from 'react-icons/fa'
+import { LuArrowRight } from 'react-icons/lu'
+import { MdOutlineQueryStats, MdTrackChanges } from 'react-icons/md'
+import { TbApiApp, TbFilePencil } from 'react-icons/tb'
+import { PiAirTrafficControlBold } from 'react-icons/pi'
+import { useEffect, useState } from 'react'
 
-function SearchContent() {
-  const router = useRouter()
-  const searchParams = useSearchParams()
-  const query = searchParams.get('q') || ''
-  const [searchQuery, setSearchQuery] = useState(query)
-
-  // Update input when URL changes
-  useEffect(() => {
-    setSearchQuery(query)
-  }, [query])
-
-  const filteredTools = query
-    ? toolsData.filter(tool => 
-        tool.name.toLowerCase().includes(query.toLowerCase()) ||
-        tool.description?.toLowerCase().includes(query.toLowerCase()) ||
-        tool.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase())) ||
-        tool.creator.toLowerCase().includes(query.toLowerCase())
-      )
-    : toolsData
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault()
-    router.push(`/?q=${encodeURIComponent(searchQuery)}`)
-  }
-
-  return (
-    <div className="px-4 py-8 md:p-8 bg-secondaryOriginal rounded-4xl font-medium flex flex-col gap-6">
-      {/* Search Section */}
-      <section className="flex flex-col gap-4">
-        <h1 className="text-2xl font-bold text-gray-700">Search Tools</h1>
-        <form onSubmit={handleSearch} className="flex gap-2">
-          <div className="flex-1 relative">
-            <input 
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search by name, description, tags, or creator..."
-              className="w-full px-4 py-2.5 pr-10 rounded-lg bg-lightOriginal/50 
-                       placeholder:text-gray-400 text-gray-700
-                       focus:outline-none focus:ring-2 focus:ring-accentOriginal/20"
-            />
-            <LuSearch className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400" />
-          </div>
-          <button 
-            type="submit"
-            className="px-6 py-2.5 rounded-lg bg-accentOriginal text-white font-semibold
-                     hover:bg-accentOriginal/90 transition-colors"
-          >
-            Search
-          </button>
-        </form>
-      </section>
-
-      {/* Results Section */}
-      <section className="flex-1">
-        <div className="flex justify-between items-center mb-4">
-          <h2 className="text-lg font-semibold text-gray-700">
-            {query ? `Search Results (${filteredTools.length})` : 'All Tools'}
-          </h2>
-        </div>
-
-        {filteredTools.length === 0 ? (
-          <div className="flex flex-col items-center justify-center py-12 text-gray-500">
-            <p>No tools found</p>
-            <p className="text-sm mt-2">Try adjusting your search terms</p>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {filteredTools.map((tool) => (
-              <ToolCard 
-                key={tool.id}
-                id={tool.id}
-                name={tool.name}
-                creator={tool.creator}
-                description={tool.description || "No description available"}
-                imageUrl={tool.imageUrl}
-                tags={tool.tags}
-                link={tool.link}
-              />
-            ))}
-          </div>
-        )}
-      </section>
-    </div>
-  )
+interface FloatingIcon {
+  id: number;
+  Icon: any;
+  x: number;
+  y: number;
+  size: number;
+  speed: number;
+  opacity: number;
+  color: string;
 }
 
 export default function HomePage() {
+  const [icons, setIcons] = useState<FloatingIcon[]>([])
+
+  useEffect(() => {
+    // Icons we want to float around
+    const iconComponents = [
+      { Icon: MdOutlineQueryStats, color: 'text-accentOriginal' }, 
+      { Icon: MdTrackChanges, color: 'text-primaryOriginal' },
+      { Icon: TbApiApp, color: 'text-lightOriginal' },
+      { Icon: TbFilePencil, color: 'text-accentOriginal' },
+      { Icon: PiAirTrafficControlBold, color: 'text-primaryOriginal' }
+    ]
+
+    // Create initial floating icons
+    const initialIcons: FloatingIcon[] = Array.from({ length: 25 }, (_, i) => {
+      const iconChoice = iconComponents[Math.floor(Math.random() * iconComponents.length)]
+      return {
+        id: i,
+        Icon: iconChoice.Icon,
+        color: iconChoice.color,
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        size: Math.random() * (80 - 40) + 40,
+        speed: Math.random() * (1 - 0.2) + 0.2,
+        opacity: Math.random() * (1 - 0.8) + 0.9
+      }
+    })
+
+    setIcons(initialIcons)
+
+    // Animation function
+    let animationFrameId: number
+    const animate = () => {
+      setIcons(prev => prev.map(icon => ({
+        ...icon,
+        y: icon.y - icon.speed,
+        x: icon.x + Math.sin(icon.y * 0.01) * 0.5,
+        // Reset position when icon goes off screen
+        ...(icon.y + icon.size < 0 ? {
+          y: window.innerHeight + icon.size,
+          x: Math.random() * window.innerWidth
+        } : {})
+      })))
+      animationFrameId = requestAnimationFrame(animate)
+    }
+
+    animate()
+    return () => cancelAnimationFrame(animationFrameId)
+  }, [])
+
   return (
-    <Suspense fallback={
-      <div className="px-4 py-8 md:p-8 bg-secondaryOriginal rounded-4xl font-medium flex flex-col gap-6">
-        <div className="animate-pulse">
-          <div className="h-10 bg-gray-200 rounded w-1/4 mb-4"></div>
-          <div className="h-12 bg-gray-200 rounded mb-6"></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {[1,2,3,4].map((i) => (
-              <div key={i} className="h-[200px] bg-gray-200 rounded-lg"></div>
-            ))}
-          </div>
+    <div className="px-4 py-8 md:p-8 bg-secondaryOriginal rounded-4xl font-medium flex flex-col items-center justify-center gap-6 h-full text-center relative overflow-hidden">
+      {/* Background Icons */}
+      {icons.map(icon => (
+        <icon.Icon
+          key={icon.id}
+          className={`absolute ${icon.color}`}
+          style={{
+            left: `${icon.x}px`,
+            top: `${icon.y}px`,
+            fontSize: `${icon.size}px`,
+            opacity: icon.opacity,
+            transform: `rotate(${Math.sin(icon.y * 0.01) * 10}deg)`,
+          }}
+        />
+      ))}
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center">
+        <div className="flex items-center gap-3 text-4xl md:text-5xl font-bold tracking-tighter text-gray-700">
+          <FaToolbox className="text-accentOriginal" />
+          <h1>InfiniteTools</h1>
         </div>
+
+        <p className="text-gray-500 text-lg md:text-xl max-w-[600px] mt-6">
+          Your one-stop hub for discovering third-party tools and resources in the Infinite Flight ecosystem
+        </p>
+
+        <Link 
+          href="/search" 
+          className="mt-8 inline-flex items-center gap-2 bg-accentOriginal text-white px-6 py-3 rounded-xl
+                     font-semibold hover:gap-4 transition-all duration-300 hover:bg-accentOriginal/90"
+        >
+          Start Exploring <LuArrowRight />
+        </Link>
       </div>
-    }>
-      <SearchContent />
-    </Suspense>
+    </div>
   )
 }

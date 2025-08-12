@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { LuSearch, LuWrench, LuBookmark, LuMenu } from 'react-icons/lu'
+import { LuSearch, LuWrench, LuBookmark, LuHouse, LuMenu } from 'react-icons/lu'
 import { 
   Sheet, 
   SheetContent, 
@@ -17,8 +17,13 @@ import Banner from './banner'
 
 const links = [
   {
-    name: "Search",
+    name: "Home",
     path: "/",
+    icon: <LuHouse />
+  },
+  {
+    name: "Search",
+    path: "/search",
     icon: <LuSearch />
   },
   {
@@ -56,7 +61,7 @@ const Navbar = () => {
            
         <Sheet>
           <SheetTrigger className='md:hidden p-2 hover:bg-light/50 rounded-lg transition-colors'>
-            <LuMenu className="w-6 h-6 text-gray-500" />
+          <LuMenu className="w-6 h-6 text-gray-500" />
           </SheetTrigger>
           <SheetContent side="left" className="w-[225px] p-4 bg-lightOriginal">
             <SheetHeader>
