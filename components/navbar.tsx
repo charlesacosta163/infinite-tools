@@ -13,6 +13,7 @@ import Link from 'next/link'
 import { FaToolbox } from 'react-icons/fa'
 import { usePathname } from 'next/navigation'
 import { IoWarning } from 'react-icons/io5'
+import Banner from './banner'
 
 const links = [
   {
@@ -92,6 +93,8 @@ const Navbar = () => {
               <IoWarning className="w-4 h-4 text-yellow-400" />
               <span className="text-xs text-gray-500">Needs Fact Check</span>
             </div>
+
+            <Banner />
             </div>
           </SheetContent>
         </Sheet>

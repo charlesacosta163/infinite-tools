@@ -1,9 +1,13 @@
+'use client'
+
 import TagSelector from "@/components/tools/tag-selector";
 import { toolsData } from "@/lib/tools-data";
 import { ToolCard } from "@/components/tools/tool-card";
+import { useSearchParams } from "next/navigation";
 
-export default async function Home({searchParams}: {searchParams: Promise<{category: string}>}) {
-  const { category } = await searchParams
+export default function Home() {
+  const searchParams = useSearchParams()
+  const category = searchParams.get('category')
 
   const filteredTools = category?.toLowerCase() === "all" || !category
     ? toolsData
@@ -17,10 +21,21 @@ export default async function Home({searchParams}: {searchParams: Promise<{categ
 
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {
-            filteredTools.map((tool, index) => <ToolCard key={index} id={index} name={tool.name} creator={tool.creator} description={tool.description || ""} imageUrl={tool.imageUrl} tags={tool.tags} link={tool.link} isBeta={tool.isBeta || false}/>)
+            filteredTools.map((tool, index) => (
+              <ToolCard 
+                key={index} 
+                id={index} 
+                name={tool.name} 
+                creator={tool.creator} 
+                description={tool.description || ""} 
+                imageUrl={tool.imageUrl} 
+                tags={tool.tags} 
+                link={tool.link} 
+                isBeta={tool.isBeta || false}
+              />
+            ))
           }
         </section>
     </div>
-
   );
 }

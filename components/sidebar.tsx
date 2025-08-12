@@ -6,6 +6,8 @@ import React from 'react'
 import { IoWarning } from 'react-icons/io5';
 import { LuBookmark, LuSearch, LuWrench } from "react-icons/lu";
 
+import Banner from './banner';
+
 const links = [
   {
     name: "Search",
@@ -25,7 +27,6 @@ const links = [
 ]
 
 const Sidebar = () => {
-
   const pathname = usePathname()
 
   const isActive = (path: string) => {
@@ -36,7 +37,7 @@ const Sidebar = () => {
   }
 
   return (
-    <aside className='w-[225px] py-8 px-4'>
+    <aside className='w-[225px] py-8 px-4 flex flex-col justify-between h-full'>
         <section className="flex flex-col gap-2 font-semibold">
 
             {
@@ -52,6 +53,7 @@ const Sidebar = () => {
               <IoWarning className="w-4 h-4 text-yellow-400" />
               <span className="text-xs text-gray-500">Needs Fact Check</span>
             </div>
+      <Banner />
         </section>
     </aside>
   )
