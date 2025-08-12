@@ -47,7 +47,7 @@ const Sidebar = () => {
 
             {
               links.map((link, index) => (
-                <Link key={index} href={link.path} className={`flex gap-2 items-center rounded-md group cursor-pointer text-gray-700 tracking-tight ${isActive(link.path) ? "bg-accentOriginal text-white [&>span]:text-white" : ""}`}>
+                <Link key={index} href={link.path} className={`flex gap-2 items-center rounded-md group cursor-pointer text-[#966554] tracking-tight ${isActive(link.path) ? "bg-accentOriginal text-white [&>span]:text-white" : ""}`}>
                   <span className='p-1.5 border-2 duration-200 group-hover:bg-accentOriginal group-hover:text-white text-accentOriginal border-accentOriginal flex items-center justify-center rounded-md'>{link.icon}</span>
                   {link.name}
                 </Link>

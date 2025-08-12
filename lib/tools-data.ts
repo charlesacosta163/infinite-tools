@@ -136,7 +136,7 @@ export const toolsData = [
         creator: "Cortex Development",
         description: "Cortex Development creates digital aviation tools, including Discord bots like Cortex for server management, avCortex for flight tracking, CortexVA for VA management, and CorDesign for custom-coded projects.",
         imageUrl: "https://www.cortexdevelopment.xyz/cortex.PNG",
-        tags: ["Addons", "Other"],
+        tags: ["Addons", "Bots", "Other"],
         link: "https://www.cortexdevelopment.xyz/"
     },
     // FlightCloud
@@ -398,7 +398,7 @@ export const toolsData = [
         name: "Infinite Stats",
         creator: "Stan7",
         description: "A lightweight statistics for Infinite Flight pilots that allows you to get insights into flight hours, landings, ATC operations, and more!",
-        imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/a/4/f/a4f4acb997139fad311f6dad8e5af7f6b2098823.png",
+        imageUrl: "",
         tags: ["stats"],
         link: "https://infinite-stats.vercel.app/"
     },
@@ -412,5 +412,15 @@ export const toolsData = [
         tags: ["tracker"],
         link: "https://liveflight.app/",
         isLegacy: true
+    },
+    // InfiniteView Discord Client
+    {
+        id: 41,
+        name: "InfiniteView Discord Client",
+        creator: "WML and Team",
+        description: "A Discord Client for Linux, macOS, and Windows that syncs your Infinite Flight data to Discord, displaying live flight details like aircraft, route progress, flight time, and status.",
+        imageUrl: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAbCAMAAABY1h8eAAAAzFBMVEUAAABeXl59fX1nZ2fc3Nz////n5+fj4+N1dXWnpaEwKQ4AAC4qIgAgICDT09IAJ3YDY+IIcv/HxsQ5OTm7u7kHb/2ysa8Jau8JXdHU1NQtLS0mHQAJRJkJJE8GJlQAW9IXBwBNTU0AADkHbfgLYNkAAEmCf3gARqwKOoJ1cmpDPS0Idf82LxokJCQPDw8qOz/cXAD6agX6awz/bQYWLDKuRQD1aAWnSAp0MwqYQgxlbXBEAADaXQrBUwj/bAVSCwAADBllLQuGLwCSl5jexspuAAABD0lEQVR4Ab3ORWLDMBAF0B/bo4YjO6YwM1kOM93/TlUYt+3bCAbxDwKKEsBXqkbEGNFPEB80CoURiSAaIhbDixjFkeC6xBMwKIlnZILr1pnOYROemD9wLO6eccuBlsJdmjKuZWVzeSmXtaxCkUq4seNlvVKxnKrErUpFrxkGbli9Ib9kqdQ83Rotwg21eUcu2jnTJaf7FOzhHfXvt4EnfN8fnvmSN3pUMmUsJhMxnUnz0228oMe2xnIov1ZrabWZTDZb87FtknYrIab7s7kQK1AAd4aGS6G0EhPENTwhG95G+JLYeAhRDE/SZODgDSXvAJNKeNFndNxhuQSOxNJ4pzAiTSNiCr7pB4/HYAx/7hfnUCTwkLUJuQAAAABJRU5ErkJggg==",
+        tags: ["addons", "bots"],
+        link: "https://community.infiniteflight.com/t/infiniteview-discord-client/1054869"
     }
 ]

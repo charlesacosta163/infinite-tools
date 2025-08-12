@@ -9,6 +9,7 @@ import { GrResources } from 'react-icons/gr'
 import { PiAirTrafficControlBold } from 'react-icons/pi'
 import { getToolCategoryAmounts } from '@/lib/actions'
 import { toolsData } from '@/lib/tools-data';
+import { LuBot } from 'react-icons/lu'
 
 const categories = [{
    name: "All",
@@ -34,6 +35,9 @@ const categories = [{
 }, {
    name: "ATC",
    icon: <PiAirTrafficControlBold />
+}, {
+   name: "Bots",
+   icon: <LuBot />
 }, {
    name: "Other",
    icon: <GrResources />

@@ -89,17 +89,17 @@ export default function HomePage() {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center">
         <div className="flex items-center gap-3 text-4xl md:text-5xl font-bold tracking-tighter text-gray-700">
-          <FaToolbox className="text-accentOriginal" />
-          <h1>InfiniteTools</h1>
+          <FaToolbox className="text-[#b58170]" />
+          <h1><span className="text-[#b58170]">Infinite</span>Tools</h1>
         </div>
 
-        <p className="text-gray-500 text-lg md:text-xl max-w-[600px] mt-6">
+        <p className="text-[#966554] text-lg md:text-xl max-w-[600px] mt-6">
           Your one-stop hub for discovering third-party tools and resources in the Infinite Flight ecosystem
         </p>
 
         <Link 
           href="/search" 
-          className="mt-8 inline-flex items-center gap-2 bg-accentOriginal text-white px-6 py-3 rounded-xl
+          className="mt-8 inline-flex items-center gap-2 bg-[#b58170] text-white px-6 py-3 rounded-xl
                      font-semibold hover:gap-4 transition-all duration-300 hover:bg-accentOriginal/90"
         >
           Start Exploring <LuArrowRight />

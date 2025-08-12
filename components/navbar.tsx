@@ -53,7 +53,7 @@ const Navbar = () => {
       <nav className='flex justify-between md:justify-center items-center gap-2'>
         <Link 
           href="/" 
-          className='text-xl font-bold tracking-tighter flex items-center gap-2 bg-accentOriginal text-white px-4 py-2 rounded-lg hover:bg-accentOriginal/80 transition-all duration-200 ease-in-out cursor-pointer group'
+          className='text-xl font-bold tracking-tighter flex items-center gap-2 bg-[#b58170] text-white px-4 py-2 rounded-lg hover:bg-accentOriginal/80 transition-all duration-200 ease-in-out cursor-pointer group'
         >
           <FaToolbox className='group-hover:rotate-12 transition-all duration-200 ease-in-out' /> 
           InfiniteTools
@@ -73,7 +73,7 @@ const Navbar = () => {
                   key={index}
                   href={link.path}
                   className={`
-                    flex gap-2 items-center rounded-md group cursor-pointer text-gray-700 tracking-tight
+                    flex gap-2 items-center rounded-md group cursor-pointer text-[#966554] tracking-tight
                     ${isActive(link.path) 
                       ? "bg-accentOriginal text-white [&>span]:text-white" 
                       : "hover:bg-lightOriginal/50"

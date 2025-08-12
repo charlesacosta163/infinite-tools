@@ -11,7 +11,7 @@ export default function RootLayout({
     <div className="w-full min-h-screen flex flex-col items-center relative">
       <Navbar />
 
-      <main className="max-w-[1200px] py-8 md:py-12 w-full h-full flex flex-1">
+      <main className="max-w-[1200px] py-4 md:py-12 w-full h-full flex flex-1">
         <span className="hidden md:block">
           <Sidebar />
         </span>

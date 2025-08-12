@@ -34,12 +34,13 @@ export default function PromoBanner() {
       target="_blank"
       className="mt-8 p-4 rounded-xl bg-indigo-300 transition-all duration-300 group"
     >
-      <div className="flex flex-col gap-2 text-white">
+      <div className="flex flex-col gap-2 items-center text-white">
+        <p className="text-sm opacity-90 text-center">Check out my app:</p>
         <div className="flex items-center gap-2">
           <MdOutlineQueryStats className="w-5 h-5" />
-          <h3 className="font-bold text-lg tracking-tight">IFlytics</h3>
+          <h3 className="font-black text-2xl tracking-tight"><span className="text-amber-200">IF</span>lytics</h3>
         </div>
-        <p className="text-sm opacity-90">
+        <p className="text-sm opacity-90 text-center">
           Official Release on August 25th!
         </p>
         <div className="flex gap-2 text-xs mt-1">
@@ -48,7 +49,7 @@ export default function PromoBanner() {
           <span className="font-mono font-bold">{timeLeft.minutes.toString().padStart(2, '0')}m</span>
           <span className="font-mono font-bold">{timeLeft.seconds.toString().padStart(2, '0')}s</span>
         </div>
-        <span className="flex items-center gap-1 text-sm font-medium mt-1 group-hover:gap-2 group-hover:bg-indigo-500 transition-all duration-300 bg-indigo-400 px-2 py-1 rounded-md self-start">
+        <span className="flex items-center gap-1 text-sm font-medium mt-1 group-hover:gap-2 group-hover:bg-indigo-500 transition-all duration-300 bg-indigo-400 px-2 py-1 rounded-md w-full flex justify-center">
           Visit IFlytics <LuExternalLink />
         </span>
       </div>
