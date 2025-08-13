@@ -12,9 +12,11 @@ export async function generateStaticParams() {
 }
 
 // Dynamic metadata for each tool
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const slug = (await params).slug
+
   const tool = toolsData.find(
-    (tool) => tool.name.toLowerCase().replace(/\s+/g, '-') === params.slug
+    (tool) => tool.name.toLowerCase().replace(/\s+/g, '-') === slug
   )
 
   if (!tool) return notFound()
