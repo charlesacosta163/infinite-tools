@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { getBookmarks, removeBookmark, addBookmark } from '@/lib/bookmark';
-import { LuExternalLink, LuPlane, LuBookmarkCheck, LuBookmark } from "react-icons/lu";
+import { LuExternalLink, LuPlane, LuBookmarkCheck, LuBookmark, LuInfo } from "react-icons/lu";
 import { capitalize } from "@/lib/utils";
 import Link from "next/link";
 
@@ -87,7 +87,15 @@ type ToolCardProps = {
             isLegacy ? (
              <></>
             ) : (
-              <Link href={link} target="_blank" className="flex gap-2 items-center px-3 py-1 rounded-lg bg-primaryOriginal hover:bg-accentOriginal text-lightOriginal font-bold"><LuExternalLink /> Visit</Link>
+              <div className="flex gap-2 items-center">
+                <Link 
+                  href={`/tools/${name.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="flex gap-2 items-center px-3 py-2 rounded-lg bg-accentOriginal hover:bg-accentOriginal/80 text-lightOriginal font-bold"
+                >
+                  <LuInfo />
+                </Link>
+                <Link href={link} target="_blank" className="flex gap-2 items-center px-3 py-2 rounded-lg bg-primaryOriginal hover:bg-primaryOriginal/80 text-lightOriginal font-bold"><LuExternalLink /></Link>
+              </div>
             )
            }
         </footer>

@@ -2,9 +2,9 @@
 import { useEffect, useState} from 'react'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
-import { MdTrackChanges, MdOutlineQueryStats, MdOutlineAirlines } from 'react-icons/md'
+import { MdTrackChanges, MdOutlineQueryStats, MdOutlineAirlines, MdOutlineCalendarMonth } from 'react-icons/md'
 import { FaRegBuilding } from 'react-icons/fa'
-import { TbApiApp, TbFilePencil, TbTools } from 'react-icons/tb'
+import { TbApiApp, TbFilePencil, TbRoute, TbTools } from 'react-icons/tb'
 import { GrResources } from 'react-icons/gr'
 import { PiAirTrafficControlBold } from 'react-icons/pi'
 import { getToolCategoryAmounts } from '@/lib/actions'
@@ -21,6 +21,10 @@ const categories = [{
    name: "Stats",
    icon: <MdOutlineQueryStats />
 }, {
+   name: "FPL",
+   icon: <TbRoute />
+},
+{
    name: "API",
    icon: <TbApiApp />
 }, {

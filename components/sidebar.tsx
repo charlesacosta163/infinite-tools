@@ -4,9 +4,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation'
 import React from 'react'
 import { IoWarning } from 'react-icons/io5';
-import { LuBookmark, LuHouse, LuSearch, LuWrench } from "react-icons/lu";
+import { LuBookmark, LuHouse, LuSearch, LuUser, LuWrench } from "react-icons/lu";
 
 import Banner from './banner';
+import { FaLaptopCode } from 'react-icons/fa';
 
 const links = [
   {
@@ -28,6 +29,11 @@ const links = [
     name: "Bookmarks",
     path: "/bookmarks",
     icon: <LuBookmark />
+  },
+  {
+    name: "App Developers",
+    path: "/developers",
+    icon: <FaLaptopCode />
   }
 ]
 

@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { LuSearch, LuWrench, LuBookmark, LuHouse, LuMenu } from 'react-icons/lu'
+import { LuSearch, LuWrench, LuBookmark, LuHouse, LuMenu, LuUser } from 'react-icons/lu'
 import { 
   Sheet, 
   SheetContent, 
@@ -10,7 +10,7 @@ import {
   SheetTrigger 
 } from "@/components/ui/sheet"
 import Link from 'next/link'
-import { FaToolbox } from 'react-icons/fa'
+import { FaLaptopCode, FaToolbox } from 'react-icons/fa'
 import { usePathname } from 'next/navigation'
 import { IoWarning } from 'react-icons/io5'
 import Banner from './banner'
@@ -35,6 +35,11 @@ const links = [
     name: "Bookmarks",
     path: "/bookmarks",
     icon: <LuBookmark />
+  },
+  {
+    name: "App Developers",
+    path: "/developers",
+    icon: <FaLaptopCode />
   }
 ]
 
