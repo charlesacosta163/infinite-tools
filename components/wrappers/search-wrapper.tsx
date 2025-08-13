@@ -5,6 +5,8 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import { toolsData } from '@/lib/tools-data'
 import { ToolCard } from '@/components/tools/tool-card'
 import { LuSearch } from 'react-icons/lu'
+import Link from 'next/link'
+import { FaToolbox } from 'react-icons/fa'
 
 function SearchContent() {
   const router = useRouter()
@@ -96,6 +98,17 @@ function SearchContent() {
             <LuSearch className="w-12 h-12 mb-4 text-accentOriginal/50" />
             <p className="text-lg font-medium">Start searching for tools</p>
             <p className="text-sm mt-2">Find tools by name, description, tags, or creator</p>
+
+            <div className="flex flex-col items-center gap-2 mt-4">
+              <span className="text-gray-500">or</span>
+              <Link 
+          href="/tools" 
+          className="inline-flex items-center gap-2 bg-[#b58170] text-white px-4 py-2 rounded-xl
+                     font-semibold hover:gap-3 transition-all duration-300 hover:bg-accentOriginal/90"
+        >
+          <FaToolbox /> View All Tools
+        </Link>
+            </div>
           </div>
         )}
       </section>
@@ -103,7 +116,7 @@ function SearchContent() {
   )
 }
 
-export default function HomePage() {
+export default function SearchWrapper() {
   return (
     <Suspense fallback={
       <div className="px-4 py-8 md:p-8 bg-secondaryOriginal rounded-4xl font-medium flex flex-col gap-6">

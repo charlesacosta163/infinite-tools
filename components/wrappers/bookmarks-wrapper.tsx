@@ -6,7 +6,7 @@ import { ToolCard } from '@/components/tools/tool-card';
 import { LuTrash2 } from 'react-icons/lu';
 import { FaRegFaceSadCry } from 'react-icons/fa6';
 
-export default function BookmarksPage() {
+export default function BookmarksWrapper() {
   const [bookmarkedTools, setBookmarkedTools] = useState<BookmarkedTool[]>([]);
 
   useEffect(() => {

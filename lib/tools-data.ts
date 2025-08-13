@@ -269,7 +269,7 @@ export const toolsData = [
         creator: "XY_MAGIC and Team", 
         description: "A Discord bot for Infinite Flight that offers a variety of commands, from flight tracking, live ATC, aircraft information database to user stats commands and many more.",
         imageUrl: "https://global.discourse-cdn.com/infiniteflight/optimized/4X/9/0/4/904f5f1ddc2fa695adc1325355e3d80d0607d78b_2_1640x882.jpeg",
-        tags: ["addons"],
+        tags: ["bots"],
         link: "https://community.infiniteflight.com/t/aeroassist-your-all-in-one-discord-bot-2024-thread/901523"
     },
     // iFly Schedules
@@ -360,7 +360,7 @@ export const toolsData = [
         creator: "AdamCallow",
         description: "A web-based suite offering flight plan editing, KML-to-FPL conversion, live flight status checks, expert server activity tracking, and an interactive IF map showing airports, traffic and more!",
         imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/3/c/a/3ca168ef3d7ca84e176e122b531e578f10c255ba.png",
-        tags: ["FPL", "tracker"],
+        tags: ["FPL", "other"],
         link: "https://if-flightplan-tools.vercel.app/"
     },
     // ConnectKit
