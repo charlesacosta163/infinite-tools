@@ -3,6 +3,7 @@ import React from 'react'
 import { Metadata } from 'next'
 import { capitalize } from '@/lib/utils'
 
+// Fix the type definition for searchParams
 export async function generateMetadata({ searchParams }: { searchParams: { category?: string | undefined } }): Promise<Metadata> {
   // Await the searchParams
   const category = (await searchParams).category

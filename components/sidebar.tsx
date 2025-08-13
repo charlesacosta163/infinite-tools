@@ -60,10 +60,6 @@ const Sidebar = () => {
               ))
             }
 
-<div className="px-4 py-2 bg-gray-100 rounded-md flex items-center gap-2">
-              <IoWarning className="w-4 h-4 text-yellow-400" />
-              <span className="text-xs text-gray-500">Needs Fact Check</span>
-            </div>
       <Banner />
         </section>
     </aside>

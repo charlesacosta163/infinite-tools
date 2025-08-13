@@ -2,8 +2,9 @@ import SearchWrapper from '@/components/wrappers/search-wrapper'
 import React from 'react'
 import { Metadata } from 'next'
 
-// Make metadata dynamic with search params
-export async function generateMetadata({ searchParams }: { searchParams: { q?: string } }): Promise<Metadata> {
+// Fix the type definition for searchParams
+export async function generateMetadata({ searchParams }: { searchParams: { q?: string | undefined } }): Promise<Metadata> {
+  // Await the searchParams
   const query = (await searchParams).q
 
   return {
@@ -20,7 +21,7 @@ export async function generateMetadata({ searchParams }: { searchParams: { q?: s
       description: query
         ? `Search results for "${query}" in the Infinite Flight ecosystem`
         : 'Search for third-party tools and resources in the Infinite Flight ecosystem',
-    },  
+    },
   }
 }
 
