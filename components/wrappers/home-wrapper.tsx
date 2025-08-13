@@ -2,11 +2,12 @@
 
 import Link from 'next/link'
 import { FaToolbox } from 'react-icons/fa'
-import { LuArrowRight } from 'react-icons/lu'
+import { LuArrowRight, LuBot, LuPlane } from 'react-icons/lu'
 import { MdOutlineQueryStats, MdTrackChanges } from 'react-icons/md'
-import { TbApiApp, TbFilePencil } from 'react-icons/tb'
+import { TbApiApp, TbFilePencil, TbRoute } from 'react-icons/tb'
 import { PiAirTrafficControlBold } from 'react-icons/pi'
 import { useEffect, useState } from 'react'
+
 
 interface FloatingIcon {
   id: number;
@@ -29,7 +30,10 @@ export default function HomeWrapper() {
       { Icon: MdTrackChanges, color: 'text-primaryOriginal' },
       { Icon: TbApiApp, color: 'text-lightOriginal' },
       { Icon: TbFilePencil, color: 'text-accentOriginal' },
-      { Icon: PiAirTrafficControlBold, color: 'text-primaryOriginal' }
+      { Icon: PiAirTrafficControlBold, color: 'text-primaryOriginal' },
+      { Icon: LuBot, color: 'text-gray-300/75' },
+      { Icon: LuPlane, color: 'text-blue-300/50' },
+      { Icon: TbRoute, color: 'text-purple-300/50' }
     ]
 
     // Create initial floating icons
@@ -90,7 +94,7 @@ export default function HomeWrapper() {
       <div className="relative z-10 flex flex-col items-center">
         <div className="flex items-center gap-3 text-4xl md:text-5xl font-bold tracking-tighter text-gray-700">
           <FaToolbox className="text-[#b58170]" />
-          <h1><span className="text-[#b58170]">Infinite</span>Tools</h1>
+          <h1><span className="text-[#b58170]">Infinite</span>Toolbox</h1>
         </div>
 
         <p className="text-[#966554] text-lg md:text-xl max-w-[600px] mt-6">

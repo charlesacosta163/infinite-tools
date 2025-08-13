@@ -10,15 +10,15 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
 
   return {
     title: category 
-      ? `${capitalize(category)} Tools - InfiniteTools`
-      : 'All Tools - InfiniteTools',
+      ? `${capitalize(category)} Tools - InfiniteToolbox`
+      : 'All Tools - InfiniteToolbox',
     description: category
       ? `Browse ${category.toLowerCase()} tools and resources for Infinite Flight`
       : 'Discover third-party tools and resources in the Infinite Flight ecosystem',
     openGraph: {
       title: category 
-        ? `${capitalize(category)} Tools - InfiniteTools`
-        : 'All Tools - InfiniteTools',
+        ? `${capitalize(category)} Tools - InfiniteToolbox`
+        : 'All Tools - InfiniteToolbox',
       description: category
         ? `Browse ${category.toLowerCase()} tools and resources for Infinite Flight`
         : 'Discover third-party tools and resources in the Infinite Flight ecosystem',

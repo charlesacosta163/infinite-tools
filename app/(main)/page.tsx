@@ -5,10 +5,10 @@ import React from 'react'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'InfiniteTools - Discover Third-Party Tools in Infinite Flight',
+  title: 'InfiniteToolbox - Discover Third-Party Tools in Infinite Flight',
   description: 'Your one-stop hub for discovering third-party tools and resources in the Infinite Flight ecosystem',
   openGraph: {
-    title: 'InfiniteTools - Discover Third-Party Tools in Infinite Flight',
+    title: 'InfiniteToolbox - Discover Third-Party Tools in Infinite Flight',
     description: 'Your one-stop hub for discovering third-party tools and resources in the Infinite Flight ecosystem',
     images: [
       {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         height: 630,
       },
     ],
-    siteName: 'InfiniteTools',
+    siteName: 'InfiniteToolbox',
     type: 'website',
     url: 'https://infinitetools.vercel.app',
     locale: 'en_US',

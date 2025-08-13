@@ -22,10 +22,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!tool) return notFound()
 
   return {
-    title: `${tool.name} - InfiniteTools`,
+    title: `${tool.name} - InfiniteToolbox`,
     description: tool.description || `Learn more about ${tool.name} for Infinite Flight`,
     openGraph: {
-      title: `${tool.name} - InfiniteTools`,
+      title: `${tool.name} - InfiniteToolbox`,
       description: tool.description || `Learn more about ${tool.name} for Infinite Flight`,
       images: [tool.imageUrl],
     },

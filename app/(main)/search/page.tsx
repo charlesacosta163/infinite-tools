@@ -9,15 +9,15 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
 
   return {
     title: query 
-      ? `Search results for "${query}" - InfiniteTools`
-      : 'Search - InfiniteTools',
+      ? `Search results for "${query}" - InfiniteToolbox`
+      : 'Search - InfiniteToolbox',
     description: query
       ? `Search results for "${query}" in the Infinite Flight ecosystem`
       : 'Search for third-party tools and resources in the Infinite Flight ecosystem',
     openGraph: {
       title: query 
-        ? `Search results for "${query}" - InfiniteTools`
-        : 'Search - InfiniteTools',
+        ? `Search results for "${query}" - InfiniteToolbox`
+        : 'Search - InfiniteToolbox',
       description: query
         ? `Search results for "${query}" in the Infinite Flight ecosystem`
         : 'Search for third-party tools and resources in the Infinite Flight ecosystem',

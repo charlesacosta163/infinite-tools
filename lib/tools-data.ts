@@ -183,7 +183,7 @@ export const toolsData = [
         link: "https://heysaf.github.io/if-asc-wiki/usage/#quick-start",
         isLegacy: true
     },
-    // VACenter
+    // VA Center
     {
         id: 18,
         name: "VACenter",
@@ -361,7 +361,7 @@ export const toolsData = [
         creator: "AdamCallow",
         description: "A web-based suite offering flight plan editing, KML-to-FPL conversion, live flight status checks, expert server activity tracking, and an interactive IF map showing airports, traffic and more!",
         imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/3/c/a/3ca168ef3d7ca84e176e122b531e578f10c255ba.png",
-        tags: ["addons", "other", "VA", "tracker"],
+        tags: ["FPL", "tracker"],
         link: "https://if-flightplan-tools.vercel.app/"
     },
     // ConnectKit
@@ -378,9 +378,9 @@ export const toolsData = [
     {
         id: 37,
         name: "VANet",
-        creator: "Matei, KaiM and Team",
+        creator: "Matei and Team",
         description: "VANet is a connected platform for Virtual Airlines, allowing them to interact and through the power of the cloud can also add never-before-seen features to their Crew Center.",
-        imageUrl: "https://global.discourse-cdn.com/infiniteflight/optimized/4X/f/1/5/f1579c88a66d8760c3c5a4e4fa2db85e3487afa9_2_448x450.png",
+        imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/2/d/1/2d1ca1afea51cf2c87486ed9675cae37ba3dd52b.png",
         tags: ["VA"],
         link: "https://vanet.app/"
     },
@@ -444,5 +444,45 @@ export const toolsData = [
         imageUrl: "https://images.emojiterra.com/twitter/v13.1/512px/1f9f0.png",
         tags: ["other"],
         link: "https://infinitetools.vercel.app/"
+    },
+    // VA Bot
+    {
+        id: 44,
+        name: "VABot",
+        creator: "Matei and Team",
+        description: "VABot is an advanced Discord bot for virtual airlines that integrates with the ATLAS Crew Center to provide useful VA information and additional features for managing your Discord server.",
+        imageUrl: "https://va-center.com/public/products/vabot.jpeg",
+        tags: ["VA", "bots"],
+        link: "https://va-center.com/vabot/"
+    },
+    // VA Atlas
+    {
+        id: 45,
+        name: "VA ATLAS",
+        creator: "Matei and Team",
+        description: "VA ATLAS is a free, modern, and easy-to-use crew center for virtual airlines that offers advanced features like custom logins, staff-created challenges, and extensive tools for managing your VA.",
+        imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/d/6/e/d6ec9c5faf13be59e20c5ad18b38ae9ba47e089a.png",
+        tags: ["VA"],
+        link: "https://atlas.va-center.com/"
+    },
+    // Ifc2
+    {
+        id: 46,
+        name: "Ifc2",   
+        creator: "likeablegeek",
+        description: "A Javascript/Node.js client for the Infinite Flight simulator's Connect API version 2",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-Rp1vYV9-HFavcU2q7M4HUSrJrSIhAp6NVg&s",
+        tags: ["API"],
+        link: "https://github.com/likeablegeek/ifc2"
+    },
+    // IF Connect Python
+    {
+        id: 47,
+        name: "IF Connect Python",
+        creator: "paodekuai",
+        description: "A Python client for the Infinite Flight simulator's Connect API version 1/2",
+        imageUrl: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/paodekuai/96/1054523_2.png",
+        tags: ["API"],
+        link: "https://community.infiniteflight.com/t/a-python-client-which-support-infinite-flight-connect-api-v1-2/730712"
     }
 ]

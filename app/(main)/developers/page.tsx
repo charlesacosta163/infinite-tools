@@ -5,7 +5,7 @@ import { LuExternalLink, LuPlane, LuUser } from 'react-icons/lu'
 import { capitalize } from '@/lib/utils'
 
 export const metadata: Metadata = {
-  title: 'App Developers - InfiniteTools',
+  title: 'App Developers - InfiniteToolbox',
   description: 'Thank you to all the amazing creators who build tools for the Infinite Flight community',
 }
 

@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { LuSearch, LuWrench, LuBookmark, LuHouse, LuMenu, LuUser } from 'react-icons/lu'
+import { LuSearch, LuWrench, LuBookmark, LuHouse, LuMenu } from 'react-icons/lu'
 import { 
   Sheet, 
   SheetContent, 
@@ -12,7 +12,6 @@ import {
 import Link from 'next/link'
 import { FaLaptopCode, FaToolbox } from 'react-icons/fa'
 import { usePathname } from 'next/navigation'
-import { IoWarning } from 'react-icons/io5'
 import Banner from './banner'
 
 const links = [
@@ -58,10 +57,10 @@ const Navbar = () => {
       <nav className='flex justify-between md:justify-center items-center gap-2'>
         <Link 
           href="/" 
-          className='text-xl font-bold tracking-tighter flex items-center gap-2 bg-[#b58170] text-white px-4 py-2 rounded-lg hover:bg-accentOriginal/80 transition-all duration-200 ease-in-out cursor-pointer group'
+          className='text-xl font-bold tracking-tighter flex items-center gap-2 bg-[#b58170] text-white px-4 py-2 rounded-full rounded-bl-none hover:bg-accentOriginal/80 transition-all duration-200 ease-in-out cursor-pointer group'
         >
           <FaToolbox className='group-hover:rotate-12 transition-all duration-200 ease-in-out' /> 
-          InfiniteTools
+          InfiniteToolbox
         </Link>
            
         <Sheet>

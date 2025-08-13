@@ -5,7 +5,7 @@ import React from 'react'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Your Bookmarks - InfiniteTools',
+  title: 'Your Bookmarks - InfiniteToolbox',
   description: 'Your saved tools and resources in the Infinite Flight ecosystem',
 }
 
