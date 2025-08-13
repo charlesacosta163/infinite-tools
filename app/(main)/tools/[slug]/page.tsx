@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { toolsData } from '@/lib/tools-data'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { LuArrowLeft } from 'react-icons/lu'  // Import the arrow icon
+import { LuArrowLeft, LuPlane } from 'react-icons/lu'  // Import the arrow icon
 
 // Generate static params for all tools
 export async function generateStaticParams() {
@@ -55,7 +55,11 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
       {/* Tool Icon/Image */}
       <div className="flex items-start gap-6">
         <div className="w-16 h-16 rounded-xl bg-light overflow-hidden">
-          <img src={tool.imageUrl} alt={tool.name} className="w-full h-full object-cover" />
+          {tool.imageUrl ? (
+            <img src={tool.imageUrl} alt={tool.name} className="w-full h-full object-cover" />
+          ) : (
+            <LuPlane className="text-accent w-full h-full object-cover" />
+          )}
         </div>
 
         {/* Tool Info */}

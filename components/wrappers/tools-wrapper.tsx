@@ -20,7 +20,7 @@ function ToolsContent() {
     <div className="px-4 py-8 md:p-8 bg-secondaryOriginal rounded-4xl font-medium flex flex-col gap-4 h-full">
       <TagSelector />
       <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {filteredTools.map((tool, index) => (
+        {filteredTools.sort((a, b) => a.name.localeCompare(b.name)).map((tool, index) => (
           <ToolCard 
             key={index} 
             id={index} 
@@ -39,7 +39,7 @@ function ToolsContent() {
   );
 }
 
-export default function Home() {
+export default function ToolsWrapper() {
   return (
     <Suspense fallback={
       <div className="px-4 py-8 md:p-8 bg-secondaryOriginal rounded-4xl font-medium flex flex-col gap-4 h-full">

@@ -35,7 +35,7 @@ export const toolsData = [
         creator: "Canadian Seagull Studios",
         name: "InfiniteTrack",
         description: "InfiniteTrack is a real-time Android flight tracker for Infinite Flight that offers customizable maps, pilot and flight searches, airport details, notifications, and integration with IF Remote for enhanced live data.",
-        imageUrl: "https://play-lh.googleusercontent.com/MMIAN9rpfMPZm1vupKt3oMhwSjmmUR6I8UXHFdlXFHvl59EtftXitVtkc2dd0ZjRk8U=w480-h960-rw",
+        imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/a/f/9/af9be1a962dbdf2723f6146fac0dd424386b952c.png",
         tags: ["tracker", "android"],
         link: "https://play.google.com/store/apps/details?id=com.infinite.track"
     }, 
@@ -80,7 +80,7 @@ export const toolsData = [
         tags: ["API"],
         link: "https://infiniteflight.com/guide/developer-reference/connect-api/overview"
     },
-    // JanPolet Aircraft Database
+    // IF Aircraft Database
     {
         id: 8,
         name: "IF Aircraft Database",
@@ -90,15 +90,14 @@ export const toolsData = [
         tags: ["other"],
         link: "https://www.helpathand.nl/janpolet/infinite-flight-aircraft-information/"
     }, 
-    // IF Virtual Airlines
     {
         id: 9,
-        name: "IF Virtual Airlines List",
-        creator: "IFVARB Team",
-        description: "The Database for all Virtual Airlines (VA)",
-        imageUrl: "https://pbs.twimg.com/media/Frn26eqWwAAZM9y?format=jpg&name=large",
-        tags: ["VA"],
-        link: "https://ifvarb.com/database.php"
+        name: "IF Aircraft Liveries Database",
+        creator: "Jan Polet",
+        description: "A database of all aircraft liveries for Infinite Flight",
+        imageUrl: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAY1BMVEVHcEwlOJckOJcmOZcmOJeig1X+vQ/+vhD+vhD9vhD+vwzztxz+vg/+vwUZNJgiN5cmOZYlOJf/wwC6klIAKJ0mOZdKTIomOJf+vhACLZoxPpKNdG4mOJclOJf9vhB2Znj9vRD/z8MbAAAAIXRSTlMAIcv/rQ43bY640/f//////4H///+//+9j////11Yj/0H1VYqTAAAAzElEQVR4Ab3RhQ7DMAwE0Gwuo8sM//+V6zWRMxb3qaJe4KyoS9z+ZHcix1VvPD8IozhJs5yJipcoSIyyqnMibpQVn/+1pD1S6uToKIE2y4GZgE0xD1F6nKeRodM+gTivTwPulBQhlOkpHvVeJpJjRTllxEA0I5X/kJidsNgpy6kehqG2GXVmTqhNVxyJj89Oq965YSfaisV2KqWtDWF/aQsso8o8ZYmdrDOeFci9rb0TZYUb6QcTH6/a1gMRd3enQJcXa1SWkfrJ9dQVHu+jEkC2cnBMAAAAAElFTkSuQmCC",
+        tags: ["other"],
+        link: "https://www.helpathand.nl/janpolet/infinite-flight-aircraft-liveries/"
     },
     // Infinite Horizon
     {
@@ -435,15 +434,15 @@ export const toolsData = [
         tags: ["FPL"],
         link: "https://simbrief.com/"
     },
-    // InfiniteTools
+    // InfiniteToolbox
     {
         id: 43,
-        name: "InfiniteTools",
+        name: "InfiniteToolbox",
         creator: "charlesacosta163",
-        description: "InfiniteTools is a directory of third-party apps and resources built for the Infinite Flight community, designed to help pilots and enthusiasts easily discover, explore, and learn about tools ranging from live flight trackers and planning utilities to virtual airline management systems, complete with developer credits and accurate descriptions for each listing.",
+        description: "InfiniteToolbox is a directory of third-party apps and resources built for the Infinite Flight community, designed to help pilots and enthusiasts easily discover, explore, and learn about tools ranging from live flight trackers and planning utilities to virtual airline management systems, complete with developer credits and accurate descriptions for each listing.",
         imageUrl: "https://images.emojiterra.com/twitter/v13.1/512px/1f9f0.png",
         tags: ["other"],
-        link: "https://infinitetools.vercel.app/"
+        link: "https://infinitetoolbox.vercel.app/"
     },
     // VA Bot
     {
@@ -484,5 +483,25 @@ export const toolsData = [
         imageUrl: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/paodekuai/96/1054523_2.png",
         tags: ["API"],
         link: "https://community.infiniteflight.com/t/a-python-client-which-support-infinite-flight-connect-api-v1-2/730712"
+    },
+    // IF Virtual Airlines
+    {
+        id: 48,
+        name: "IF Virtual Airlines List",
+        creator: "IFVARB Team",
+        description: "The Database for all Virtual Airlines (VA)",
+        imageUrl: "https://pbs.twimg.com/media/Frn26eqWwAAZM9y?format=jpg&name=large",
+        tags: ["VA"],
+        link: "https://ifvarb.com/database.php"
+    },
+    // FlightSmart
+    {
+        id: 49,
+        name: "FlightSmart",
+        creator: "darkeyes",
+        description: "FlightSmart is an Infinite Flight companion tool that provides aircraft-specific takeoff, landing, fuel burn, and performance data based on community-sourced information.",
+        imageUrl: "https://flightsmart.github.io/images/flightSmartTitleOG.png",
+        tags: ["FPL", "other"],
+        link: "https://flightsmart.github.io/"
     }
 ]

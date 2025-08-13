@@ -42,7 +42,7 @@ type ToolCardProps = {
         <header className="flex justify-between items-center">
            <div className="flex gap-2 items-center">
             <div className="w-6 h-6 rounded-full bg-light overflow-hidden">
-              {imageUrl ? <img src={imageUrl} alt={name} className="w-full h-full"/> : <LuPlane className="text-accent w-full h-full"/>}
+              {imageUrl ? <img src={imageUrl} alt={name} className="w-full h-full object-cover"/> : <LuPlane className="text-accent w-full h-full object-cover"/>}
             </div>
 
             <div className="flex flex-col">
