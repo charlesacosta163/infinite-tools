@@ -30,9 +30,11 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default function ToolPage({ params }: { params: { slug: string } }) {
+export default async function ToolPage({ params }: { params: Promise<{ slug: string }> }) {
+  const slug = (await params).slug
+
   const tool = toolsData.find(
-    (tool) => tool.name.toLowerCase().replace(/\s+/g, '-') === params.slug
+    (tool) => tool.name.toLowerCase().replace(/\s+/g, '-') === slug
   )
 
   if (!tool) return notFound()

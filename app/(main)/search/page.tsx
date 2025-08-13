@@ -3,7 +3,7 @@ import React from 'react'
 import { Metadata } from 'next'
 
 // Fix the type definition for searchParams
-export async function generateMetadata({ searchParams }: { searchParams: { q?: string | undefined } }): Promise<Metadata> {
+export async function generateMetadata({ searchParams }: { searchParams: Promise<{ q?: string | undefined }> }): Promise<Metadata> {
   // Await the searchParams
   const query = (await searchParams).q
 
