@@ -24,14 +24,14 @@ type ToolCardProps = {
     useEffect(() => {
       // Check if tool is bookmarked on component mount
       const bookmarks = getBookmarks();
-      setIsBookmarked(bookmarks.some(b => b.id === id));
-    }, [id]);
+      setIsBookmarked(bookmarks.some(b => b.name.toLowerCase() === name.toLowerCase()));
+    }, [name]);
   
     const handleBookmark = () => {
       if (isBookmarked) {
-        removeBookmark(id);
+        removeBookmark(name);
       } else {
-        addBookmark({ id, name, creator, description, imageUrl, tags, link });
+        addBookmark({ id, name, creator, description, imageUrl, tags, link, isBeta: isBeta || false, isLegacy: isLegacy || false });
       }
       setIsBookmarked(!isBookmarked);
     };

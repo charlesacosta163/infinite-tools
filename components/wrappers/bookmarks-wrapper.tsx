@@ -14,9 +14,9 @@ export default function BookmarksWrapper() {
     setBookmarkedTools(bookmarks);
   }, []);
 
-  const handleRemoveBookmark = (toolId: number) => {
-    removeBookmark(toolId);
-    setBookmarkedTools(prev => prev.filter(tool => tool.id !== toolId));
+  const handleRemoveBookmark = (toolName: string) => {
+    removeBookmark(toolName);
+    setBookmarkedTools(prev => prev.filter(tool => tool.name.toLowerCase() !== toolName.toLowerCase()));
   };
 
   return (
@@ -37,7 +37,7 @@ export default function BookmarksWrapper() {
           {bookmarkedTools.map((tool) => (
             <div key={tool.id} className="group relative">
               <button 
-                onClick={() => handleRemoveBookmark(tool.id)}
+                onClick={() => handleRemoveBookmark(tool.name)}
                 className="absolute top-2 right-2 z-10 p-2 rounded-lg bg-white/80 backdrop-blur-sm 
                          opacity-0 group-hover:opacity-100 transition-opacity duration-200
                          hover:bg-red-50 text-gray-400 hover:text-red-400"
@@ -53,6 +53,8 @@ export default function BookmarksWrapper() {
                 imageUrl={tool.imageUrl} 
                 tags={tool.tags} 
                 link={tool.link} 
+                isBeta={tool.isBeta || false}
+                isLegacy={tool.isLegacy || false}
               />
             </div>
           ))}

@@ -9,6 +9,8 @@ export interface BookmarkedTool {
     link: string;
     tags: string[];
     dateBookmarked: string;
+    isBeta?: boolean;
+    isLegacy?: boolean;
 }
 
 export function getBookmarks(): BookmarkedTool[] {
@@ -19,25 +21,32 @@ export function getBookmarks(): BookmarkedTool[] {
 
 export function addBookmark(tool: Omit<BookmarkedTool, 'dateBookmarked'>): void {
     const bookmarks = getBookmarks();
-    const exists = bookmarks.some(b => b.id === tool.id);
+    const existingBookmarkIndex = bookmarks.findIndex(b => b.name.toLowerCase() === tool.name.toLowerCase());
     
-    if (!exists) {
-        const newBookmark = {
-            ...tool,
-            dateBookmarked: new Date().toISOString()
-        };
+    const newBookmark = {
+        ...tool,
+        dateBookmarked: new Date().toISOString()
+    };
+
+    if (existingBookmarkIndex !== -1) {
+        // Update existing bookmark with new data while preserving the original date
+        newBookmark.dateBookmarked = bookmarks[existingBookmarkIndex].dateBookmarked;
+        bookmarks[existingBookmarkIndex] = newBookmark;
+    } else {
+        // Add new bookmark
         bookmarks.push(newBookmark);
-        localStorage.setItem(BOOKMARK_KEY, JSON.stringify(bookmarks));
     }
+    
+    localStorage.setItem(BOOKMARK_KEY, JSON.stringify(bookmarks));
 }
 
-export function removeBookmark(toolId: number): void {
+export function removeBookmark(toolName: string): void {
     const bookmarks = getBookmarks();
-    const filtered = bookmarks.filter(b => b.id !== toolId);
+    const filtered = bookmarks.filter(b => b.name.toLowerCase() !== toolName.toLowerCase());
     localStorage.setItem(BOOKMARK_KEY, JSON.stringify(filtered));
 }
 
-export function isBookmarked(toolId: number): boolean {
+export function isBookmarked(toolName: string): boolean {
     const bookmarks = getBookmarks();
-    return bookmarks.some(b => b.id === toolId);
+    return bookmarks.some(b => b.name.toLowerCase() === toolName.toLowerCase());
 }

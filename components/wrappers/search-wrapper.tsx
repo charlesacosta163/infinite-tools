@@ -22,7 +22,6 @@ function SearchContent() {
   const filteredTools = query
     ? toolsData.filter(tool => 
         tool.name.toLowerCase().includes(query.toLowerCase()) ||
-        tool.description?.toLowerCase().includes(query.toLowerCase()) ||
         tool.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase())) ||
         tool.creator.toLowerCase().includes(query.toLowerCase())
       )
@@ -44,7 +43,7 @@ function SearchContent() {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search by name, description, tags, or creator..."
+              placeholder="Search by name, categories, or developers..."
               className="w-full px-4 py-2.5 pr-10 rounded-lg bg-lightOriginal/50 
                        placeholder:text-gray-400 text-gray-700
                        focus:outline-none focus:ring-2 focus:ring-accentOriginal/20"
@@ -88,6 +87,8 @@ function SearchContent() {
                     imageUrl={tool.imageUrl}
                     tags={tool.tags}
                     link={tool.link}
+                    isBeta={tool.isBeta || false}
+                    isLegacy={tool.isLegacy || false}
                   />
                 ))}
               </div>

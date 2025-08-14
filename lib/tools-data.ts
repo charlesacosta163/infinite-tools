@@ -186,7 +186,7 @@ export const toolsData = [
     {
         id: 18,
         name: "VACenter",
-        creator: "Matei & Team",
+        creator: "Matei and Team",
         description: "VACenter provides a suite of tools for Infinite Flight Virtual Airlines, including ATLAS and VANet crew centers, plus VABot, a powerful Discord bot for VA management and integration.",
         imageUrl: "https://va-center.com/public/products/logo.png",
         tags: ["VA"],
@@ -370,7 +370,7 @@ export const toolsData = [
         creator: "squeezelemon",
         description: "A Swift client for Infinite Flight's Connect APIs, built using the Network framework.",
         imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/f/8/0/f80b824ae9eaee98459b3f1951b9eca3e8d5bd83.png",
-        tags: ["addons", "iOS"],
+        tags: ["API"],
         link: "https://github.com/sqeezelemon/ConnectKit/"
     },
     // VANet
@@ -503,5 +503,15 @@ export const toolsData = [
         imageUrl: "https://flightsmart.github.io/images/flightSmartTitleOG.png",
         tags: ["FPL", "other"],
         link: "https://flightsmart.github.io/"
+    },
+    // Infinite Live 
+    {
+        id: 50,
+        name: "Infinite Live",
+        creator: "Pilot_Dan1",
+        description: "Infinite Live is a free tracker meant to track pilots for VA/VOs",
+        imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/5/5/6/55652618e3ef99e2de8a1568da7ff3d49092327a.png",
+        tags: ["VA", "tracker"],
+        link: "https://community.infiniteflight.com/t/infinite-live-va-tracker/688320"
     }
 ]
