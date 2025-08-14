@@ -98,7 +98,7 @@ function SearchContent() {
           <div className="flex flex-col items-center justify-center py-12 text-gray-500">
             <LuSearch className="w-12 h-12 mb-4 text-accentOriginal/50" />
             <p className="text-lg font-medium">Start searching for tools</p>
-            <p className="text-sm mt-2">Find tools by name, description, tags, or creator</p>
+            <p className="text-sm mt-2">Find tools by name, categories, or developers</p>
 
             <div className="flex flex-col items-center gap-2 mt-4">
               <span className="text-gray-500">or</span>

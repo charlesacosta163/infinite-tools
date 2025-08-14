@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { LuSearch, LuWrench, LuBookmark, LuHouse, LuMenu } from 'react-icons/lu'
+import { LuSearch, LuWrench, LuBookmark, LuHouse, LuMenu, LuExternalLink } from 'react-icons/lu'
 import { 
   Sheet, 
   SheetContent, 
@@ -13,6 +13,7 @@ import Link from 'next/link'
 import { FaLaptopCode, FaToolbox } from 'react-icons/fa'
 import { usePathname } from 'next/navigation'
 import Banner from './banner'
+import { TbHomeInfinity } from 'react-icons/tb'
 
 const links = [
   {
@@ -99,6 +100,17 @@ const Navbar = () => {
               ))}
 
             <Banner />
+            <div className="mt-2 bg-gradient-to-br from-gray-800 to-gray-900 py-4 px-2 rounded-xl text-white flex flex-col items-center justify-between gap-3 relative overflow-hidden">
+         <TbHomeInfinity className="absolute -left-0 -bottom-6 w-36 h-36 text-white/5" />
+         <p className='text-sm font-medium relative z-10'>Infinite Flight Community</p>
+         <Link 
+         target='_blank'
+           href="https://community.infiniteflight.com/t/infinitetoolbox-an-all-in-one-directory-for-infinite-flight-third-party-apps/1080167?u=charlesacosta163" 
+           className="text-xs bg-white/10 hover:bg-white/20 transition-colors px-4 py-2 rounded-lg text-white flex items-center gap-2 z-10"
+         >
+           Visit Forum <LuExternalLink className="w-4 h-4" />
+         </Link>
+      </div>
             </div>
           </SheetContent>
         </Sheet>

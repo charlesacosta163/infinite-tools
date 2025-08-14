@@ -32,7 +32,7 @@ export default function PromoBanner() {
     <Link 
       href="https://iflytics.app" 
       target="_blank"
-      className="mt-8 p-4 rounded-xl bg-indigo-300 transition-all duration-300 group"
+      className="mt-2 p-4 rounded-xl bg-blue-300 transition-all duration-300 group"
     >
       <div className="flex flex-col gap-2 items-center text-white">
         <p className="text-sm opacity-90 text-center">Check out my app:</p>
@@ -49,7 +49,7 @@ export default function PromoBanner() {
           <span className="font-mono font-bold">{timeLeft.minutes.toString().padStart(2, '0')}m</span>
           <span className="font-mono font-bold">{timeLeft.seconds.toString().padStart(2, '0')}s</span>
         </div>
-        <span className="flex items-center gap-1 text-sm font-medium mt-1 group-hover:gap-2 group-hover:bg-indigo-500 transition-all duration-300 bg-indigo-400 px-2 py-1 rounded-md w-full flex justify-center">
+        <span className="flex items-center gap-1 text-sm font-medium mt-1 group-hover:gap-2 group-hover:bg-blue-500 transition-all duration-300 bg-blue-400 px-2 py-1 rounded-md w-full flex justify-center">
           Visit IFlytics <LuExternalLink />
         </span>
       </div>
