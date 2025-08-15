@@ -230,7 +230,7 @@ export const toolsData = [
         description: "IF Remote is an all-in-one remote control app for Infinite Flight, allowing you to monitor and control your flight wherever you are in the world while not next to your Infinite Flight device!",
         imageUrl: "",
         tags: ["addons", "iOS"],
-        link: "https://ifremote.com/"
+        link: "https://community.infiniteflight.com/t/if-remote-is-here-monitor-and-control-your-flight-from-anywhere/963091"
     },
     // Groupifly
     {
@@ -240,7 +240,7 @@ export const toolsData = [
         description: "Groupifly is a pilot-matching, event listing and tutor-tutee brokering service that connects you with other Infinite Flight pilots who are looking to fly at the same time.",
         imageUrl: "https://canadianseagulls.com/wp-content/uploads/2024/10/Groupifly_v2_cropped.png",
         tags: ["addons"],
-        link: "https://groupifly.com/"
+        link: "https://community.infiniteflight.com/t/groupifly-is-finally-here/952845"
     },
     // Map Connect V2
     {
@@ -513,5 +513,16 @@ export const toolsData = [
         imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/5/5/6/55652618e3ef99e2de8a1568da7ff3d49092327a.png",
         tags: ["VA", "tracker"],
         link: "https://community.infiniteflight.com/t/infinite-live-va-tracker/688320"
+    },
+    // Infinite Passengers
+    {
+        id: 51,
+        name: "Infinite Passengers",
+        creator: "IF Passengers Team",
+        description: "Infinite Passengers is a passengers and airline management for Infinite Flight. App no longer supported.",
+        imageUrl: "https://infinitepassengers.com/Content/images/favicon-96x96.png",
+        tags: ["addons"],
+        link: "https://infinitepassengers.com/",
+        isLegacy: true
     }
 ]

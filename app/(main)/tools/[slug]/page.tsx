@@ -82,7 +82,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
       </div>
 
       {/* Description */}
-      <p className="text-gray-600">{tool.description || "No description available"}</p>
+      <p className="text-gray-600">{tool.description || "No description available"} {tool.name.toLowerCase() === "aerolog" && <b><br/><br/>ONLY FOR LONG FLIGHTS, <a href="https://community.infiniteflight.com/t/officially-released-aerolog-log-your-flights-in-a-better-way/1078571/47?u=charlesacosta163" target="_blank" className="text-blue-500 hover:underline">CLICK HERE</a> TO LEARN MORE</b>}</p>
 
       {/* Tags */}
       <div className="flex gap-2 flex-wrap">
