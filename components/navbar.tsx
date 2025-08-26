@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { LuSearch, LuWrench, LuBookmark, LuHouse, LuMenu, LuExternalLink } from 'react-icons/lu'
+import { LuSearch, LuWrench, LuBookmark, LuHouse, LuMenu, LuExternalLink, LuYoutube } from 'react-icons/lu'
 import { 
   Sheet, 
   SheetContent, 
@@ -40,6 +40,11 @@ const links = [
     name: "App Developers",
     path: "/developers",
     icon: <FaLaptopCode />
+  },
+  {
+    name: "Channels",
+    path: "/channels",
+    icon: <LuYoutube />
   }
 ]
 

@@ -8,6 +8,7 @@ import { LuBookmark, LuExternalLink, LuHouse, LuSearch, LuWrench } from "react-i
 import Banner from './banner';
 import { FaLaptopCode } from 'react-icons/fa';
 import { TbHomeInfinity } from 'react-icons/tb';
+import { FiYoutube } from 'react-icons/fi';
 
 const links = [
   {
@@ -31,9 +32,14 @@ const links = [
     icon: <LuBookmark />
   },
   {
-    name: "App Developers",
+    name: "Developers",
     path: "/developers",
     icon: <FaLaptopCode />
+  },
+  {
+    name: "Channels",
+    path: "/channels",
+    icon: <FiYoutube />
   }
 ]
 
@@ -50,15 +56,16 @@ const Sidebar = () => {
   return (
     <aside className='w-[225px] py-8 px-4 flex flex-col justify-between h-full'>
         <section className="flex flex-col gap-2 font-semibold">
-
-            {
-              links.map((link, index) => (
-                <Link key={index} href={link.path} className={`flex gap-2 items-center rounded-md group cursor-pointer text-[#966554] tracking-tight ${isActive(link.path) ? "bg-accentOriginal text-white [&>span]:text-white" : ""}`}>
-                  <span className='p-1.5 border-2 duration-200 group-hover:bg-accentOriginal group-hover:text-white text-accentOriginal border-accentOriginal flex items-center justify-center rounded-md'>{link.icon}</span>
-                  {link.name}
-                </Link>
-              ))
-            }
+            <div className="grid grid-cols-2 gap-2">
+              {
+                links.map((link, index) => (
+                  <Link key={index} href={link.path} className={`flex flex-col px-2 py-5 items-center rounded-md hover:bg-accentOriginal hover:text-white text-sm group cursor-pointer text-[#966554] tracking-tight transition-all duration-200 ${isActive(link.path) ? "bg-accentOriginal text-white [&>span]:text-white" : ""}`}>
+                    <span className='group-hover:text-white text-accentOriginal text-lg flex items-center justify-center rounded-md'>{link.icon}</span>
+                    {link.name}
+                  </Link>
+                ))
+              }
+            </div>
 
       <Banner />
       <div className="mt-2 bg-gradient-to-br from-gray-800 to-gray-900 py-4 px-2 rounded-xl text-white flex flex-col items-center justify-between gap-3 relative overflow-hidden">
