@@ -19,7 +19,7 @@ const ChannelsWrapper = () => {
 
           <div className="flex flex-col gap-4 items-center justify-center text-gray-600 text-center">
             <FaPersonFallingBurst className='text-6xl' />
-            This is gonna be a looonnggg list...... (page will be updated from time to time)
+            Page will be updated from time to time...
           </div>
         </section>
     </div>
