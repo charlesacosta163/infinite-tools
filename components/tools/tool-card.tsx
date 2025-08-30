@@ -76,7 +76,7 @@ type ToolCardProps = {
         </header>
   
         <div className="overflow-auto text-sm font-medium bg-gray-100/30 p-2 rounded-lg text-gray-500 w-full h-full">
-          {description || "No description available"} { name.toLowerCase() === "aerolog" && <b><br/>ONLY FOR LONG FLIGHTS, <a href="https://community.infiniteflight.com/t/officially-released-aerolog-log-your-flights-in-a-better-way/1078571/47?u=charlesacosta163" target="_blank" className="text-blue-500 hover:underline">CLICK HERE</a> TO LEARN MORE</b>}
+          {description || "No description available"}
         </div>
   
         <footer className="flex justify-between items-center gap-2">
