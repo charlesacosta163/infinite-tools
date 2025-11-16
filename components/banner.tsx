@@ -33,7 +33,7 @@ export default function PromoBanner() {
     <Link 
       href="https://iflytics.app" 
       target="_blank"
-      className="mt-2 p-4 rounded-xl bg-gradient-to-br from-green-400 via-blue-500 to-purple-600 transition-all duration-300 group hover:from-green-500 hover:via-blue-600 hover:to-purple-700"
+      className="mt-2 p-4 rounded-xl bg-pink-300 transition-all duration-300 group hover:from-green-500 hover:via-blue-600 hover:to-purple-700"
     >
       <div className="flex flex-col gap-2 items-center text-white">
         <p className="text-sm opacity-90 text-center">Check out my app:</p>
@@ -42,11 +42,11 @@ export default function PromoBanner() {
           <h3 className="font-black text-2xl tracking-tight">IFlytics</h3>
         </div>
         <p className="text-sm opacity-90 text-center">
-          Version 1.0.1 OUT NOW!
+          Version 1.4.2 OUT NOW!
         </p>
 
-        <span className="px-3 py-0.5 rounded-full text-[0.6rem] bg-red-400 text-white animate-bounce">Discounts Available!</span>
-        <span className="flex items-center gap-1 text-sm font-medium mt-1 group-hover:gap-2 group-hover:bg-green-600 transition-all duration-300 bg-green-500 px-2 py-1 rounded-md w-full flex justify-center">
+        {/* <span className="px-3 py-0.5 rounded-full text-[0.6rem] bg-red-400 text-white animate-bounce">Discounts Available!</span> */}
+        <span className="flex items-center gap-1 text-sm font-medium mt-1 group-hover:gap-2 group-hover:bg-red-600 transition-all duration-300 bg-red-500 px-2 py-1 rounded-md w-full justify-center">
           Visit IFlytics <LuExternalLink />
         </span>
       </div>

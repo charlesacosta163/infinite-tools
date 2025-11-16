@@ -40,11 +40,6 @@ const links = [
     name: "App Developers",
     path: "/developers",
     icon: <FaLaptopCode />
-  },
-  {
-    name: "Channels",
-    path: "/channels",
-    icon: <LuYoutube />
   }
 ]
 

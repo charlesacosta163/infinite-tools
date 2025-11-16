@@ -7,6 +7,7 @@ import { MdOutlineQueryStats, MdTrackChanges } from 'react-icons/md'
 import { TbApiApp, TbFilePencil, TbRoute } from 'react-icons/tb'
 import { PiAirTrafficControlBold } from 'react-icons/pi'
 import { useEffect, useState } from 'react'
+import AppOfTheDay from '@/components/app-of-the-day'
 
 
 interface FloatingIcon {
@@ -91,23 +92,32 @@ export default function HomeWrapper() {
       ))}
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center">
-        <div className="flex items-center gap-3 text-4xl md:text-5xl font-bold tracking-tighter text-gray-700">
-          <FaToolbox className="text-[#b58170]" />
-          <h1><span className="text-[#b58170]">Infinite</span>Toolbox</h1>
+      <div className="relative z-10 flex flex-col items-center gap-8 max-w-6xl mx-auto w-full">
+        <div className="flex lg:flex-row flex-col">
+          <div className="flex items-center self-center gap-3 text-4xl lg:text-5xl font-bold tracking-tighter text-gray-700">
+            <FaToolbox className="text-[#b58170]" />
+            <h1><span className="text-[#b58170]">Infinite</span>Toolbox</h1>
+          </div>
+
+          <div className="flex flex-col gap-4">
+            <p className="text-[#966554] text-lg lg:text-xl max-w-[600px] text-center mt-4 lg:mt-0">
+              Your one-stop hub for discovering third-party tools and resources in the Infinite Flight ecosystem
+            </p>
+
+            <Link 
+              href="/search" 
+              className="self-center inline-flex items-center gap-2 bg-[#b58170] text-white px-6 py-3 rounded-xl
+                        font-semibold hover:gap-4 transition-all duration-300 hover:bg-accentOriginal/90"
+            >
+              Start Exploring <LuArrowRight />
+            </Link>
+          </div>
         </div>
 
-        <p className="text-[#966554] text-lg md:text-xl max-w-[600px] mt-6">
-          Your one-stop hub for discovering third-party tools and resources in the Infinite Flight ecosystem
-        </p>
-
-        <Link 
-          href="/search" 
-          className="mt-8 inline-flex items-center gap-2 bg-[#b58170] text-white px-6 py-3 rounded-xl
-                     font-semibold hover:gap-4 transition-all duration-300 hover:bg-accentOriginal/90"
-        >
-          Start Exploring <LuArrowRight />
-        </Link>
+        {/* App of the Day */}
+        <div className="w-full">
+          <AppOfTheDay />
+        </div>
       </div>
     </div>
   )

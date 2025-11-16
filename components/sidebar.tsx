@@ -35,11 +35,6 @@ const links = [
     name: "Developers",
     path: "/developers",
     icon: <FaLaptopCode />
-  },
-  {
-    name: "Channels",
-    path: "/channels",
-    icon: <FiYoutube />
   }
 ]
 
@@ -59,7 +54,7 @@ const Sidebar = () => {
             <div className="grid grid-cols-2 gap-2">
               {
                 links.map((link, index) => (
-                  <Link key={index} href={link.path} className={`flex flex-col px-2 py-5 items-center rounded-md hover:bg-accentOriginal hover:text-white text-sm group cursor-pointer text-[#966554] tracking-tight transition-all duration-200 ${isActive(link.path) ? "bg-accentOriginal text-white [&>span]:text-white" : ""}`}>
+                  <Link key={index} href={link.path} className={`flex flex-col px-2 py-5 items-center rounded-md hover:bg-accentOriginal hover:text-white text-sm group cursor-pointer text-[#966554] tracking-tight transition-all duration-200 ${isActive(link.path) ? "bg-accentOriginal text-white [&>span]:text-white" : ""} ${index === links.length - 1 ? "col-span-2" : ""}`}>
                     <span className='group-hover:text-white text-accentOriginal text-lg flex items-center justify-center rounded-md'>{link.icon}</span>
                     {link.name}
                   </Link>

@@ -44,7 +44,7 @@ export const toolsData = [
         id: 4,
         name: "IFlytics",
         isBeta: false,
-        description: "IFlytics is a comprehensive flight statistics platform for Infinite Flight that provides detailed analytics on your flights, along with powerful tools such as a chart visualizer, aircraft and route analyzer, and an Expert Server live flight tracker.",
+        description: "IFlytics is a comprehensive user statistics platform for Infinite Flight that provides detailed analytics on your flights, along with powerful tools such as a chart visualizer, aircraft and route analyzer, and a live flight tracker.",
         creator: "charlesacosta163",
         imageUrl: "data:image/png;base64,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",
         tags: ["stats", "tracker"],
@@ -113,7 +113,7 @@ export const toolsData = [
     {
         id: 11,
         name: "Aerolog",
-        creator: "Ryan_And_Riona",
+        creator: "Aeroverse Devs",
         description: "Aerolog is a flight logbook for Infinite Flight that lets you log flights, view them on an interactive map, analyze and share stats, and will soon offer one-click automatic logging.",
         imageUrl: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAsVBMVEX29vX39vX6+fj9/Pv///26vsVodYg0Smdyf5LJzNDw8PAAD0cAKFUALFYACUVban+ssrsgPmEAHU8AI1IvSWmNlqTl5ucAFEx7hpaGkJ+YoKwALl5/t91IW3Y+mc7/+/cRUHswo98bnNvK2+lteo3////d3uAAebacpLAggLW+2++dn6hlhaJZl8BRqt6VxeUZdKiVtc55p8io0OtdjK/i7fQAkdcAR3fCxs1vfZB1gpQJSKkSAAABF0lEQVR4AayQg3bEQBRAR7G3jdUYyzL4/w/rOjzeO57nB85AMLB4L4UvAp4HgAgTgtG6AqFohmE5AtBCAfGMIEqSKCuIU8dSCCFA2kYTz7y968ZZCM885Vg3dd2ydd12EGXASUGQiJLr6cLG9IkahFdvz6KRIX9EcZykfpYXMYLTdHI3ij1Ayky3q5if9Ygv4nrrOHDHKPs4nAnDwzHkaeoUfwpfXjgvM6nRd+VW0YH++V10Pjz+xVEVBG7KrXQwrKvq1Mgah8EKKORUlSPLxuLLwDgjGEF8ucJBRjl52nZWzvYcBVnW6DsDPRvbs3ma071ucHrLceeS1CEr3lbLrnWcvOs4pWVTg+3zITQ+g+7zfoL/DUYAAHa9FbGE8dl1AAAAAElFTkSuQmCC",
         tags: ["logger"],
@@ -535,5 +535,59 @@ export const toolsData = [
         imageUrl: "https://demo.flyaltitude.app/files/logos/light-1755879671225.webp",
         tags: ["VA"],
         link: "https://www.flyaltitude.app/"
-    }
+    },
+    // InFlight Flight Tracker
+    {
+        id: 53,
+        name: "InFlight Flight Tracker",
+        creator: "_ServerNoob",
+        description: "InFlight Flight Tracker is a next-generation flight tracking and pilot utility for the Infinite Flight platform that includes primary flight displays, real-time tracking, and more! Customizable layouts available.",
+        imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/3/b/f/3bfbd581fff8f20e83049b59b93e2053e4fa3ce0.png",
+        tags: ["tracker"],
+        link: "https://inflight.info/",
+        isBeta: true,
+    },
+    // IF-Skyroute
+    {
+        id: 54,
+        name: "IF-Skyroute",
+        creator: "AZ001",
+        description: "IF Skyroute is an interactive web-based map that lets you explore all 3D airports currently available in-game. The goal is to create a clean and easy-to-use platform where you can browse airports by ICAO/IATA code and name, click on airports to see quick details, and navigate smoothly across the globe with Mapbox integration.",
+        imageUrl: "",
+        tags: ["FPL", "other"],
+        link: "https://if-skyroute.vercel.app/",
+    },
+    // AeroRadarX
+    {
+        id: 55,
+        name: "AeroRadarX",
+        creator: "Aeroverse Devs",
+        description: "AeroRadar is a flight tracking tool for Infinite Flight that tracks flights and pilots in real-time. 3D map integration coming soon!",
+        imageUrl: "https://aeroradarv0.vercel.app/images/logo-aeroradarx.png",
+        tags: ["tracker"],
+        link: "https://aeroradarv0.vercel.app/",
+        isBeta: true,
+    },
+    // IPlanner
+    {
+        id: 56,
+        name: "IPlanner",
+        creator: "Aeroverse Devs",
+        description: "IPlanner is a flight planning logger designed to log your planned flights for Infinite Flight.",
+        imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/c/f/d/cfdc5aa5b512805b57546fa6b77d229fd602b766.png",
+        tags: ["FPL"],
+        link: "https://community.infiniteflight.com/t/under-fixing-iplanner-a-personalized-flight-planning-web-for-infinite-flight/1110663",
+        isBeta: true,
+    },
+    // Trackfinity
+    {
+        id: 57,
+        name: "Trackfinity",
+        creator: "andrejtr",
+        description: "Trackfinity is a flight tracking tool for Infinite Flight that tracks flights and pilots in real-time.",
+        imageUrl: "",
+        tags: ["tracker"],
+        link: "https://trackfinity.app/",
+        isBeta: true,
+    },
 ]

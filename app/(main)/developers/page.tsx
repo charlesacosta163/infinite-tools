@@ -36,7 +36,7 @@ export default function CreatorsPage() {
         {Object.values(creators).map((creator) => (
           <div 
             key={creator.name}
-            className="p-6 rounded-xl bg-lightOriginal/50 flex flex-col gap-4"
+            className="p-6 rounded-xl bg-lightOriginal/50 flex flex-col gap-4 self-start"
           >
             <h2 className="text-xl font-bold text-gray-700">{creator.name}</h2>
             
