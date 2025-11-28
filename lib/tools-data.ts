@@ -16,7 +16,7 @@ export const toolsData = [
         creator: "Ethan_C and Team",
         description: "InfiniteInfo is an iOS and web-based flight tracker for Infinite Flight that lets users monitor live flights and view statistics on other pilots.",
         imageUrl: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAJ1BMVEVHcEx4df50cv10cv12c/50cv14dv91c/12dP52dP50cv12dP5zcf1DoMPRAAAADHRSTlMADfHHdtgytUwckVsktqbGAAAAjklEQVQokdVRQRLEIAgDREXL/9+7Kqx2O7bnbg6OEIMQAP4XJeEddZCqhrLlqhrSJc8hsDin1KPFkZ4Rx/Hl8shx4txescfZOHRFbZ32bry+kWkWlB5FD8qPMuOSTSWE0UGbQNjupz8BSUmGB0eZ8yyrxPVmBMVYr+blSCZk2MHMoC0H2McIt4t52Nnr8QHrpQfsYU8wpgAAAABJRU5ErkJggg==",
-        tags: ["tracker", "stats", "iOS"],
+        tags: ["tracker", "iOS"],
         link: "https://infiniteinfo.app/"
     },
     // InfiniteX
@@ -58,6 +58,7 @@ export const toolsData = [
         description: "Map Flight is an Infinite Flight third-party live flight tracker that lets you monitor flights, search airports, view flight plans, and access player and weather information.",
         imageUrl: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAsVBMVEX+///////n5+e9vr6cnZ2Tk5Omp6f8/PyysrJFRUUAAABMTEzc3NxISEg0NDR3d3isrK2HiIhdXV3Pz8/T09NlZWbKyso6Ozvv7+8tLi6AgYFxcXL29vb75bz4yV33wB34wTX6y2n/78v879j51If2uwD9zFn95rZ8gIYgISH/3If99+3636r3xkn/3Y7r3sROU1siJiwKCgr4wS+psLg1O0X+8+Ggpa1gZ3IAABEcHByAer9kAAABKklEQVR4Aa3RRULEQABE0VQ8f9zd3QXn/geDQAdGV1DxvPa2/iX6yh2xHdfz7RuqIIyIk7KuKiudIZtz875byBVLOrcSqXKpEBXy5UAVT2dWxSnXyOsrwbnVG+kmDfv2QAulFqR/TPFpvtT2XMgrGXan2+sPhm2ZHkvQ+C6q0bg3mUxn5fnCYNmH5nIw0mq9mUx62124B+pGixCu+pPNZ6XNLD0/ECdtsHakuuo+9Afb3eMT1MI8UDa4OOLoOe28vL5BqySF5zVdqV6Bd8+WLBWAthl9BSqyJD/83jJFR4oy6MMxHpzZTaUBJ8H6OxR+F6hdg9rvpw/kTZOqZ8xYE80BOTtm2wUIE4tRHkCqWIwg6fA3KhdJkrvaPCntVqJsquXXZeycTay/5wPlahUA8dQKMwAAAABJRU5ErkJggg==",
         tags: ["tracker"],
+        isLegacy: true,
         link: "https://en.map-flight.com/"
     }, 
     // Infinite Flight Live API
@@ -87,7 +88,7 @@ export const toolsData = [
         creator: "Jan Polet",
         description: "The database for all Infinite Flight aircraft and liveries, provided by Jan (Staff)",
         imageUrl: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAY1BMVEVHcEwlOJckOJcmOZcmOJeig1X+vQ/+vhD+vhD9vhD+vwzztxz+vg/+vwUZNJgiN5cmOZYlOJf/wwC6klIAKJ0mOZdKTIomOJf+vhACLZoxPpKNdG4mOJclOJf9vhB2Znj9vRD/z8MbAAAAIXRSTlMAIcv/rQ43bY640/f//////4H///+//+9j////11Yj/0H1VYqTAAAAzElEQVR4Ab3RhQ7DMAwE0Gwuo8sM//+V6zWRMxb3qaJe4KyoS9z+ZHcix1VvPD8IozhJs5yJipcoSIyyqnMibpQVn/+1pD1S6uToKIE2y4GZgE0xD1F6nKeRodM+gTivTwPulBQhlOkpHvVeJpJjRTllxEA0I5X/kJidsNgpy6kehqG2GXVmTqhNVxyJj89Oq965YSfaisV2KqWtDWF/aQsso8o8ZYmdrDOeFci9rb0TZYUb6QcTH6/a1gMRd3enQJcXa1SWkfrJ9dQVHu+jEkC2cnBMAAAAAElFTkSuQmCC",
-        tags: ["other"],
+        tags: ["utility"],
         link: "https://www.helpathand.nl/janpolet/infinite-flight-aircraft-information/"
     }, 
     {
@@ -96,7 +97,7 @@ export const toolsData = [
         creator: "Jan Polet",
         description: "A database of all aircraft liveries for Infinite Flight",
         imageUrl: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAY1BMVEVHcEwlOJckOJcmOZcmOJeig1X+vQ/+vhD+vhD9vhD+vwzztxz+vg/+vwUZNJgiN5cmOZYlOJf/wwC6klIAKJ0mOZdKTIomOJf+vhACLZoxPpKNdG4mOJclOJf9vhB2Znj9vRD/z8MbAAAAIXRSTlMAIcv/rQ43bY640/f//////4H///+//+9j////11Yj/0H1VYqTAAAAzElEQVR4Ab3RhQ7DMAwE0Gwuo8sM//+V6zWRMxb3qaJe4KyoS9z+ZHcix1VvPD8IozhJs5yJipcoSIyyqnMibpQVn/+1pD1S6uToKIE2y4GZgE0xD1F6nKeRodM+gTivTwPulBQhlOkpHvVeJpJjRTllxEA0I5X/kJidsNgpy6kehqG2GXVmTqhNVxyJj89Oq965YSfaisV2KqWtDWF/aQsso8o8ZYmdrDOeFci9rb0TZYUb6QcTH6/a1gMRd3enQJcXa1SWkfrJ9dQVHu+jEkC2cnBMAAAAAElFTkSuQmCC",
-        tags: ["other"],
+        tags: ["utility"],
         link: "https://www.helpathand.nl/janpolet/infinite-flight-aircraft-liveries/"
     },
     // Infinite Horizon
@@ -137,7 +138,7 @@ export const toolsData = [
         creator: "Cortex Development",
         description: "Cortex Development is a suite of tools that creates digital aviation tools, including Discord bots like Cortex for server management, avCortex for flight tracking, CortexVA for VA management, and CorDesign for custom-coded projects.",
         imageUrl: "https://www.cortexdevelopment.xyz/cortex.PNG",
-        tags: ["Addons", "Bots", "Other"],
+        tags: ["Addons", "Bots", "utility"],
         link: "https://www.cortexdevelopment.xyz/"
     },
     // FlightCloud
@@ -158,7 +159,7 @@ export const toolsData = [
         creator: "SkyModz Team",
         description: "SkyModz is an upcoming realism add-on for Infinite Flight, aiming to introduce features like full ground crew animations and a PA-style announcement system for immersive in-flight experiences.",
         imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/3/7/2/372b88d3418fef583a9f47d4006f80ddcff74131.jpeg",
-        tags: ["addons","other"],
+        tags: ["addons","utility"],
         link: "https://sites.google.com/view/95511/home?authuser=0"
     },  
     // Infinite Planner
@@ -199,7 +200,7 @@ export const toolsData = [
         creator: "Shafferland Consulting",
         description: "Share My Infinite Flight Replay is a web tool that lets users easily upload and share their Infinite Flight replay files with others through a simple link.",
         imageUrl: "https://sharemyinfiniteflight.com/icons/logo.png",
-        tags: ["other"],
+        tags: ["utility"],
         link: "https://va-center.com/"
     },
     // In-Flight Assistant
@@ -252,16 +253,6 @@ export const toolsData = [
         tags: ["addons"],
         link: "https://community.infiniteflight.com/t/map-connect-v2-official-tutorial/706420"
     }, 
-    // InfiniteMap
-    {
-        id: 25,
-        name: "InfiniteMap",
-        creator: "Flugsohn and Team",
-        description: "InfiniteMap is a real-time, browser-based map that lets you track flights across all Infinite Flight servers – Casual, Training, and Expert.",
-        imageUrl: "https://global.discourse-cdn.com/infiniteflight/optimized/4X/8/7/0/870a18448d2a6670f8c4689e682b7b6aeb7d0eee_2_1230x286.png",
-        tags: ["tracker"],
-        link: "https://infinitemap.info"
-    },
     // AeroAssist
     {
         id: 26,
@@ -301,16 +292,6 @@ export const toolsData = [
         imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/1/8/7/1879a578eb631b8aa1177c698ddc989b227e9ca7.png",
         tags: ["addons"],
         link: "https://github.com/brk-ozs11/IFConnect"
-    },
-    // SimPictures
-    {
-        id: 30,
-        name: "SimPictures",
-        creator: "Ryanairy55",
-        description: "A website for sharing your flight simulator screenshots, similar to JetPhotos or Instagram.",
-        imageUrl: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB/UlEQVR4AdyVgWcCYRjG2/6TqgIRQQSIMAkVCUCRiAKiAhAgBAWIMaRpACkFogqRuSCJQkjFuipJz74Xx2m5pt117MeDc+e+H/e+z2kInU5HcbC8sbRZugqlw/LO4tXr9U8aQqvV0uEZFjw4ryzPdPgLC1RKhAQ+VBTok8CnigJfJMCpKMD/TwGz2YxsNovhcIh6vQ6TyfQ4Aa/Xi9lsBjEOh+MxAuFwGIfDAWLm8zmMRqP8AvRSi8UCu90Op9OJRCKB4/GIS5LJ5P0zEIlE0Gw20ev1wHEcJpMJFosFdrsdzuczblGr1cAq934BOvRe+v0+DePftsDtdiOfz6PdboPnefyWwWBAn0feNaRv7nK5kE6nUa1WIUUmk1G2B+LxOKRIpVLKCfh8Puz3e0gRi8WUEaBCWS6XuEUoFJJHgKaYyiWXy1GlYr1e45JWq4VyuQwxgUBAHoFKpQIpSqUS9TxtC8TQtSwCwWAQ0+kU16CfjfAcSWy3W3H3yyMgrF80GsVoNILAZrOBwWAQP4dOpwMBm80m/xB6PB4IUDVf3i8UChCg2VFkC7rdLohisXj1T0icTifqf2UEaLrH4zH8fv+Pe1arFavVCo1G43t0bBFhppeh1yYc8Gb5gHdMBrprls4AzDIgR7QA8T86W74QiJnQu+dL6NU9B2Jw9xwAghjuy3EQhEgAAAAASUVORK5CYII=",
-        tags: ["other"],
-        link: "https://community.infiniteflight.com/t/map-connect-v2-official-tutorial/706420"
     },
     // IFJoystickPi
     {
@@ -360,7 +341,7 @@ export const toolsData = [
         creator: "AdamCallow",
         description: "A web-based suite offering flight plan editing, KML-to-FPL conversion, live flight status checks, expert server activity tracking, and an interactive IF map showing airports, traffic and more!",
         imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/3/c/a/3ca168ef3d7ca84e176e122b531e578f10c255ba.png",
-        tags: ["FPL", "other"],
+        tags: ["FPL", "utility"],
         link: "https://if-flightplan-tools.vercel.app/"
     },
     // ConnectKit
@@ -390,7 +371,7 @@ export const toolsData = [
         creator: "Abif12 and Team",
         description: "Virtual Wings Design is a free service that makes websites for VA/VO’s.",
         imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/a/4/f/a4f4acb997139fad311f6dad8e5af7f6b2098823.png",
-        tags: ["VA", "other"],
+        tags: ["VA", "utility"],
         link: "https://community.infiniteflight.com/t/introducing-virtual-wings-design-free-quality-websites-for-vas/975465"
     },
     // Infinite Stats
@@ -431,7 +412,7 @@ export const toolsData = [
         creator: "Navigraph",
         description: "SimBrief is a free online flight planning service provided by Navigraph that helps flight simulation enthusiasts create realistic and detailed flight plans and briefing packages for their virtual flights. ",
         imageUrl: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0mIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5Oi0BCgoKDQwNFQ8QFSsZGx0rKysrKysrKysrKysrKysrKystKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIACAAIAMBIgACEQEDEQH/xAAZAAADAQEBAAAAAAAAAAAAAAAFBwgGBAP/xAAsEAABAwMCAwYHAAAAAAAAAAABAgMFAAQRBhIiMUEHEyFRYXEyUoGCwdHw/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAIB/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AXsZDSEqtbcbZvXKkAFQaTnHvWqiOyvUsgtPf27dk0ea31jI+0ZNe3ZWi5a1Ebplexltsh4FJIWk9M+fX6U92HAQCDVJTtrzRFxpG6YSXTcWr6OB/bt4x8SSKyvd1U+qIK21JCPx1zgbxltzHi2scjU1SUbcRl+/ZXiCh9hZQtP8AdKAhCSdzD3guLY5HJbZPgtPkad2kZxiWj0uMrzs8CDzHoaRYRRKAl7uDuy9aOFKVja4n5h+/WtD/ALuUs41gvXtwhpAGeI+J9hSQ7RNQR2pJZFxHWam+7TsU+s4Lw6cPTFcc5MvyrqhlaWc8lKypXqo/ihOysH//2Q==",
-        tags: ["FPL"],
+        tags: ["FPL", "utility"],
         link: "https://simbrief.com/"
     },
     // InfiniteToolbox
@@ -441,7 +422,7 @@ export const toolsData = [
         creator: "charlesacosta163",
         description: "InfiniteToolbox is a directory of third-party apps and resources built for the Infinite Flight community, designed to help pilots and enthusiasts easily discover, explore, and learn about tools ranging from live flight trackers and planning utilities to virtual airline management systems, complete with developer credits and accurate descriptions for each listing.",
         imageUrl: "https://images.emojiterra.com/twitter/v13.1/512px/1f9f0.png",
-        tags: ["other"],
+        tags: ["utility"],
         link: "https://infinitetoolbox.vercel.app/"
     },
     // VA Bot
@@ -501,7 +482,7 @@ export const toolsData = [
         creator: "darkeyes",
         description: "FlightSmart is an Infinite Flight companion tool that provides aircraft-specific takeoff, landing, fuel burn, and performance data based on community-sourced information.",
         imageUrl: "https://flightsmart.github.io/images/flightSmartTitleOG.png",
-        tags: ["FPL", "other"],
+        tags: ["FPL", "utility"],
         link: "https://flightsmart.github.io/"
     },
     // Infinite Live 
@@ -554,7 +535,7 @@ export const toolsData = [
         creator: "AZ001",
         description: "IF Skyroute is an interactive web-based map that lets you explore all 3D airports currently available in-game. The goal is to create a clean and easy-to-use platform where you can browse airports by ICAO/IATA code and name, click on airports to see quick details, and navigate smoothly across the globe with Mapbox integration.",
         imageUrl: "",
-        tags: ["FPL", "other"],
+        tags: ["FPL", "utility"],
         link: "https://if-skyroute.vercel.app/",
     },
     // AeroRadarX
@@ -589,5 +570,37 @@ export const toolsData = [
         tags: ["tracker"],
         link: "https://trackfinity.app/",
         isBeta: true,
+    },
+    // InfiTracker
+    {
+        id: 58,
+        name: "INFI-Tracker",
+        creator: "Mukundh_Ram",
+        description: "INFI-tracker is a real-time flight tracking tool for seeing and exploring the Infinite Flight skies. Satellite imagery available.",
+        imageUrl: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/mukundh_ram/288/1578725_2.png",
+        tags: ["tracker"],
+        isBeta: true,
+        link: "https://infi-tracker.online/",
+    },
+    // AeroVectorX
+    {
+        id: 59,
+        name: "AeroVectorX",
+        creator: "Aeroverse Devs",
+        description: "AeroVectorX is a social media platform for Infinite Flight screenshots, competitions, and more!",
+        imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/6/b/1/6b1b57ac2e1d831c5b873ebb3507087daf8cd257.jpeg",
+        tags: ["addons"],
+        link: "https://community.infiniteflight.com/t/aerovectorx-beta-release-a-new-social-media-for-if-screenshots-and-competitions-and-more/1104820",
+        isBeta: true,
+    },
+    // IF SimBrief Takeoff Performance to Takeoff Data Tool
+    {
+        id: 60,
+        name: "IF SimBrief Takeoff Performance to Takeoff Data Tool",
+        creator: "nk1021",
+        description: "IF SimBrief Takeoff Performance to Takeoff Data Tool converts SimBrief’s Takeoff Performance data into the correct N1% needed for Infinite Flight, something SimBrief doesn’t provide directly. It works by letting users copy the takeoff performance output from SimBrief and paste it into the tool, which then estimates the appropriate N1 setting. The app is still in development and currently supports mainly Airbus and Boeing aircraft.",
+        imageUrl: "https://img.freepik.com/free-photo/top-view-compass-small-plane-arrangement_23-2149554765.jpg?semt=ais_hybrid&w=740&q=80",
+        tags: ["utility"],
+        link: "https://infiniteflightsimbriefn1calculator.streamlit.app/"
     },
 ]
