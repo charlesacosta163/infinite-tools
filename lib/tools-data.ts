@@ -587,6 +587,7 @@ export const toolsData = [
         id: 61,
         name: "Pakistan Virtual Flight Tracker",
         creator: "Mughees_Hassan",
+        isBeta: true,
         description: "This new tracker allows users to monitor live PVA flights, view pilot activity, and follow operations in real time, all through a smooth and user-friendly interface. The app has been developed to support transparency, engagement, and operational awareness within Pakistan Virtual Airlines.",
         imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/d/b/2/db29f5dee31367b5d615293136711aef8fb3925b.png",
         tags: ["tracker", "VA"],
@@ -607,9 +608,24 @@ export const toolsData = [
         id: 63,
         name: "Indian Virtual Flight Tracker",
         creator: "Gaur.av_iation",
+        isBeta: true,
         description: "Indian Virtual Flight Tracker is a real-time flight tracking tool for seeing and exploring the Infinite Flight skies for Indian Virtual Airlines.",
         imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/9/1/d/91d4b56a5791f8f872388d29829efd826ec66a4b.jpeg",
         tags: ["tracker", "VA"],
         link: "https://inva-flight-tracker.vercel.app/",
+    },
+    // My Flight Routes
+
+    // Features: Hi everyone!
+
+{
+        id: 64,
+        name: "My Flight Routes",
+        isBeta: true,
+        creator: "atamagno",
+        description: "My Flight Routes is a simple way to track your flights and see them on a map. No account required, quickly add a flight route (origin and destination only) and see it on an interactive map instantly. Use it offline as a “calculator” for quick route data. Share and download your map. CSV flight list import/export. Optionally track multiple flights and view comprehensive stats. Get AI-powered insights to help analyze your flights (requires account).",
+        imageUrl: "https://myflightroutes.com/logo.svg",
+        tags: ["fpl", "utility"],
+        link: "https://myflightroutes.com/",
     },
 ]
