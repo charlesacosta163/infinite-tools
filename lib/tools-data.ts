@@ -113,9 +113,9 @@ export const toolsData = [
     // Aerolog
     {
         id: 11,
-        name: "Aerolog",
-        creator: "Aeroverse Devs",
-        description: "Aerolog is a flight logbook for Infinite Flight that lets you log flights, view them on an interactive map, analyze and share stats, and will soon offer one-click automatic logging.",
+        name: "AeroLog",
+        creator: "AeroVerse Devs",
+        description: "AeroLog is a flight logbook for Infinite Flight that lets you log flights, view them on an interactive map, analyze and share stats, and has its striking automatic logging feature. Merged with AeroVectorX and AeroRadarX.",
         imageUrl: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAsVBMVEX29vX39vX6+fj9/Pv///26vsVodYg0Smdyf5LJzNDw8PAAD0cAKFUALFYACUVban+ssrsgPmEAHU8AI1IvSWmNlqTl5ucAFEx7hpaGkJ+YoKwALl5/t91IW3Y+mc7/+/cRUHswo98bnNvK2+lteo3////d3uAAebacpLAggLW+2++dn6hlhaJZl8BRqt6VxeUZdKiVtc55p8io0OtdjK/i7fQAkdcAR3fCxs1vfZB1gpQJSKkSAAABF0lEQVR4AayQg3bEQBRAR7G3jdUYyzL4/w/rOjzeO57nB85AMLB4L4UvAp4HgAgTgtG6AqFohmE5AtBCAfGMIEqSKCuIU8dSCCFA2kYTz7y968ZZCM885Vg3dd2ydd12EGXASUGQiJLr6cLG9IkahFdvz6KRIX9EcZykfpYXMYLTdHI3ij1Ayky3q5if9Ygv4nrrOHDHKPs4nAnDwzHkaeoUfwpfXjgvM6nRd+VW0YH++V10Pjz+xVEVBG7KrXQwrKvq1Mgah8EKKORUlSPLxuLLwDgjGEF8ucJBRjl52nZWzvYcBVnW6DsDPRvbs3ma071ucHrLceeS1CEr3lbLrnWcvOs4pWVTg+3zITQ+g+7zfoL/DUYAAHa9FbGE8dl1AAAAAElFTkSuQmCC",
         tags: ["logger"],
         link: "https://aerolog.vercel.app"
@@ -319,6 +319,7 @@ export const toolsData = [
         id: 33,
         name: "Digital Crew",
         creator: "Digital Crew Team",
+        isLegacy: true,
         description: "DigitalCrew is a free, user-friendly platform designed to simplify the management of Virtual Airlines (VA) within the Infinite Flight mobile flight simulator, offering features like a dashboard, logbook, route database, and more. ",
         imageUrl: "https://www.digitalcrew.app/static/logo/dark-logo.png",
         tags: ["addons", "VA"],
@@ -538,17 +539,6 @@ export const toolsData = [
         tags: ["FPL", "utility"],
         link: "https://if-skyroute.vercel.app/",
     },
-    // AeroRadarX
-    {
-        id: 55,
-        name: "AeroRadarX",
-        creator: "Aeroverse Devs",
-        description: "AeroRadar is a flight tracking tool for Infinite Flight that tracks flights and pilots in real-time. 3D map integration coming soon!",
-        imageUrl: "https://aeroradarv0.vercel.app/images/logo-aeroradarx.png",
-        tags: ["tracker"],
-        link: "https://aeroradarv0.vercel.app/",
-        isBeta: true,
-    },
     // IPlanner
     {
         id: 56,
@@ -582,17 +572,6 @@ export const toolsData = [
         isBeta: true,
         link: "https://infi-tracker.online/",
     },
-    // AeroVectorX
-    {
-        id: 59,
-        name: "AeroVectorX",
-        creator: "Aeroverse Devs",
-        description: "AeroVectorX is a social media platform for Infinite Flight screenshots, competitions, and more!",
-        imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/6/b/1/6b1b57ac2e1d831c5b873ebb3507087daf8cd257.jpeg",
-        tags: ["addons"],
-        link: "https://community.infiniteflight.com/t/aerovectorx-beta-release-a-new-social-media-for-if-screenshots-and-competitions-and-more/1104820",
-        isBeta: true,
-    },
     // IF SimBrief Takeoff Performance to Takeoff Data Tool
     {
         id: 60,
@@ -602,5 +581,35 @@ export const toolsData = [
         imageUrl: "https://img.freepik.com/free-photo/top-view-compass-small-plane-arrangement_23-2149554765.jpg?semt=ais_hybrid&w=740&q=80",
         tags: ["utility"],
         link: "https://infiniteflightsimbriefn1calculator.streamlit.app/"
+    },
+    // Pakistan Virtual Flight Tracker
+    {
+        id: 61,
+        name: "Pakistan Virtual Flight Tracker",
+        creator: "Mughees_Hassan",
+        description: "This new tracker allows users to monitor live PVA flights, view pilot activity, and follow operations in real time, all through a smooth and user-friendly interface. The app has been developed to support transparency, engagement, and operational awareness within Pakistan Virtual Airlines.",
+        imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/d/b/2/db29f5dee31367b5d615293136711aef8fb3925b.png",
+        tags: ["tracker", "VA"],
+        link: "https://pva-global--muhliscan.replit.app/",
+    },
+    // Route Mapper
+    {
+        id: 62,
+        name: "Route Mapper",
+        creator: "Insi8",
+        description: "A tool that can add your hub, highlight specific countries / cities and add your routes connected to each other and use different color code for each one. Then you can take screenshot of the map and use it wherever you need it.",
+        imageUrl: "",
+        tags: ["FPL", "utility"],
+        link: "https://www.routemapper.com/",
+    },
+    // Indian Virtual Flight Tracker
+    {
+        id: 63,
+        name: "Indian Virtual Flight Tracker",
+        creator: "Gaur.av_iation",
+        description: "Indian Virtual Flight Tracker is a real-time flight tracking tool for seeing and exploring the Infinite Flight skies for Indian Virtual Airlines.",
+        imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/9/1/d/91d4b56a5791f8f872388d29829efd826ec66a4b.jpeg",
+        tags: ["tracker", "VA"],
+        link: "https://inva-flight-tracker.vercel.app/",
     },
 ]
