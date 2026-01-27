@@ -543,7 +543,7 @@ export const toolsData = [
     {
         id: 56,
         name: "IPlanner",
-        creator: "Aeroverse Devs",
+        creator: "AeroVerse Devs",
         description: "IPlanner is a flight planning logger designed to log your planned flights for Infinite Flight.",
         imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/c/f/d/cfdc5aa5b512805b57546fa6b77d229fd602b766.png",
         tags: ["FPL"],
@@ -615,9 +615,6 @@ export const toolsData = [
         link: "https://inva-flight-tracker.vercel.app/",
     },
     // My Flight Routes
-
-    // Features: Hi everyone!
-
 {
         id: 64,
         name: "My Flight Routes",
