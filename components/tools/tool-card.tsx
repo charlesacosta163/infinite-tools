@@ -2,9 +2,39 @@
 
 import { useEffect, useState } from 'react';
 import { getBookmarks, removeBookmark, addBookmark } from '@/lib/bookmark';
-import { LuExternalLink, LuPlane, LuBookmarkCheck, LuBookmark, LuInfo } from "react-icons/lu";
+import { LuExternalLink, LuPlane, LuBookmarkCheck, LuBookmark, LuInfo, LuBot, LuSettings } from "react-icons/lu";
+import { MdTrackChanges, MdOutlineQueryStats, MdOutlineAirlines } from 'react-icons/md';
+import { TbApiApp, TbFilePencil, TbRoute, TbTools } from 'react-icons/tb';
+import { PiAirTrafficControlBold } from 'react-icons/pi';
 import { capitalize } from "@/lib/utils";
 import Link from "next/link";
+import React from 'react';
+
+const tagIcons: Record<string, React.ReactElement> = {
+  tracker: <MdTrackChanges />,
+  stats: <MdOutlineQueryStats />,
+  fpl: <TbRoute />,
+  api: <TbApiApp />,
+  va: <MdOutlineAirlines />,
+  logger: <TbFilePencil />,
+  addons: <TbTools />,
+  atc: <PiAirTrafficControlBold />,
+  bots: <LuBot />,
+  utility: <LuSettings />,
+};
+
+const tagTextColors: Record<string, string> = {
+  tracker: 'text-blue-600 dark:text-blue-400',
+  stats:   'text-green-600 dark:text-green-400',
+  fpl:     'text-purple-600 dark:text-purple-400',
+  api:     'text-cyan-600 dark:text-cyan-400',
+  va:      'text-red-600 dark:text-red-400',
+  logger:  'text-amber-600 dark:text-amber-400',
+  addons:  'text-pink-600 dark:text-pink-400',
+  atc:     'text-indigo-600 dark:text-indigo-400',
+  bots:    'text-teal-600 dark:text-teal-400',
+  utility: 'text-orange-600 dark:text-orange-400',
+};
 
 type ToolCardProps = {
     id: number,
@@ -37,16 +67,16 @@ type ToolCardProps = {
     };
   
     return (
-      <div key={id} className="border border-dashed border-primaryOriginal p-4 rounded-lg flex flex-col justify-between gap-3 h-[225px] font-medium">
+      <div key={id} className="border border-dashed border-primaryOriginal dark:border-orange-400/30 p-4 rounded-lg flex flex-col justify-between gap-3 h-[225px] font-medium bg-white/20 dark:bg-gray-900">
   
         <header className="flex justify-between items-center">
            <div className="flex gap-2 items-center">
-            <div className="w-6 h-6 rounded-full bg-light overflow-hidden">
-              {imageUrl ? <img src={imageUrl} alt={name} className="w-full h-full object-cover"/> : <LuPlane className="text-accent w-full h-full object-cover"/>}
+            <div className="w-6 h-6 rounded-full bg-light dark:bg-gray-800 overflow-hidden">
+              {imageUrl ? <img src={imageUrl} alt={name} className="w-full h-full object-cover"/> : <LuPlane className="text-accent w-full h-full dark:text-white object-cover"/>}
             </div>
 
             <div className="flex flex-col">
-              <span className="font-semibold text-gray-500 flex items-center gap-2">
+              <span className="font-semibold text-gray-500 dark:text-gray-300 flex items-center gap-2">
                 {name}
                 <span className="text-xs text-gray-500 flex gap-1">
                   {isBeta && (
@@ -61,12 +91,12 @@ type ToolCardProps = {
                   )}
                 </span>
               </span>
-              <span className="text-xs text-gray-500">by {creator}</span>
+              <span className="text-xs text-gray-500 dark:text-gray-400">by {creator}</span>
             </div>
           </div>
           <button 
             onClick={handleBookmark}
-            className="p-1.5 rounded-md hover:bg-light/50 transition-colors"
+            className="p-1.5 rounded-md hover:bg-light/50 dark:hover:bg-gray-800 transition-colors"
           >
             {isBookmarked ? 
               <LuBookmarkCheck className="w-5 h-5 text-orange-400 hover:text-accentOriginal/80" /> : 
@@ -75,13 +105,23 @@ type ToolCardProps = {
           </button>
         </header>
   
-        <div className="overflow-auto text-sm font-medium bg-gray-100/30 p-2 rounded-lg text-gray-500 w-full h-full">
+        <div className="overflow-auto text-sm font-medium bg-gray-100/30 dark:bg-gray-800/50 p-2 rounded-lg text-gray-500 dark:text-gray-400 w-full h-full">
           {description || "No description available"}
         </div>
   
         <footer className="flex justify-between items-center gap-2">
            <div className="flex gap-2 flex-wrap">
-              {tags.map(tag => <span key={tag} className="text-xs px-3 py-1 rounded-lg bg-lightOriginal text-orange-400">{capitalize(tag)}</span>)}
+              {tags.map(tag => (
+                <span
+                  key={tag}
+                  className={`flex items-center gap-1 text-xs px-3 py-1 rounded-lg bg-lightOriginal dark:bg-gray-800 ${tagTextColors[tag.toLowerCase()] ?? 'text-orange-400'}`}
+                >
+                  {tagIcons[tag.toLowerCase()] && (
+                    <span className="[&>svg]:w-3 [&>svg]:h-3">{tagIcons[tag.toLowerCase()]}</span>
+                  )}
+                  {capitalize(tag)}
+                </span>
+              ))}
            </div>
            {
             isLegacy ? (
@@ -90,11 +130,11 @@ type ToolCardProps = {
               <div className="flex gap-2 items-center">
                 <Link 
                   href={`/tools/${name.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="flex gap-2 items-center px-3 py-2 rounded-lg bg-accentOriginal hover:bg-accentOriginal/80 text-lightOriginal font-bold"
+                  className="flex gap-2 items-center px-3 py-2 rounded-lg bg-accentOriginal hover:bg-accentOriginal/80 text-lightOriginal dark:text-white font-bold"
                 >
                   <LuInfo />
                 </Link>
-                <Link href={link} target="_blank" className="flex gap-2 items-center px-3 py-2 rounded-lg bg-primaryOriginal hover:bg-primaryOriginal/80 text-lightOriginal font-bold"><LuExternalLink /></Link>
+                <Link href={link} target="_blank" className="flex gap-2 items-center px-3 py-2 rounded-lg bg-primaryOriginal hover:bg-primaryOriginal/80 text-lightOriginal dark:text-white font-bold"><LuExternalLink /></Link>
               </div>
             )
            }

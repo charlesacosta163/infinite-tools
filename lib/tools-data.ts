@@ -116,7 +116,7 @@ export const toolsData = [
         name: "AeroLog",
         creator: "AeroVerse Devs",
         description: "AeroLog is a flight logbook for Infinite Flight that lets you log flights, view them on an interactive map, analyze and share stats, and has its striking automatic logging feature. Merged with AeroVectorX and AeroRadarX.",
-        imageUrl: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAsVBMVEX29vX39vX6+fj9/Pv///26vsVodYg0Smdyf5LJzNDw8PAAD0cAKFUALFYACUVban+ssrsgPmEAHU8AI1IvSWmNlqTl5ucAFEx7hpaGkJ+YoKwALl5/t91IW3Y+mc7/+/cRUHswo98bnNvK2+lteo3////d3uAAebacpLAggLW+2++dn6hlhaJZl8BRqt6VxeUZdKiVtc55p8io0OtdjK/i7fQAkdcAR3fCxs1vfZB1gpQJSKkSAAABF0lEQVR4AayQg3bEQBRAR7G3jdUYyzL4/w/rOjzeO57nB85AMLB4L4UvAp4HgAgTgtG6AqFohmE5AtBCAfGMIEqSKCuIU8dSCCFA2kYTz7y968ZZCM885Vg3dd2ydd12EGXASUGQiJLr6cLG9IkahFdvz6KRIX9EcZykfpYXMYLTdHI3ij1Ayky3q5if9Ygv4nrrOHDHKPs4nAnDwzHkaeoUfwpfXjgvM6nRd+VW0YH++V10Pjz+xVEVBG7KrXQwrKvq1Mgah8EKKORUlSPLxuLLwDgjGEF8ucJBRjl52nZWzvYcBVnW6DsDPRvbs3ma071ucHrLceeS1CEr3lbLrnWcvOs4pWVTg+3zITQ+g+7zfoL/DUYAAHa9FbGE8dl1AAAAAElFTkSuQmCC",
+        imageUrl: "https://cdn.shopify.com/s/files/1/2773/1296/files/Components_of_a_Descent_Profile_-_Pilot_Mall.png?v=1738417563",
         tags: ["logger"],
         link: "https://aerolog.vercel.app"
     },
@@ -191,7 +191,8 @@ export const toolsData = [
         description: "VACenter provides a suite of tools for Infinite Flight Virtual Airlines, including ATLAS and VANet crew centers, plus VABot, a powerful Discord bot for VA management and integration.",
         imageUrl: "https://va-center.com/public/products/logo.png",
         tags: ["VA"],
-        link: "https://va-center.com/"
+        link: "https://va-center.com/",
+        isLegacy: true
     },
     // Share my Infinite Flight Replay
     {
@@ -363,7 +364,8 @@ export const toolsData = [
         description: "VANet is a connected platform for Virtual Airlines, allowing them to interact and through the power of the cloud can also add never-before-seen features to their Crew Center.",
         imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/2/d/1/2d1ca1afea51cf2c87486ed9675cae37ba3dd52b.png",
         tags: ["VA"],
-        link: "https://vanet.app/"
+        link: "https://vanet.app/",
+        isLegacy: true
     },
     // Virtual Wings Design
     {
@@ -434,7 +436,8 @@ export const toolsData = [
         description: "VABot is an advanced Discord bot for virtual airlines that integrates with the ATLAS Crew Center to provide useful VA information and additional features for managing your Discord server.",
         imageUrl: "https://va-center.com/public/products/vabot.jpeg",
         tags: ["VA", "bots"],
-        link: "https://va-center.com/vabot/"
+        link: "https://va-center.com/vabot/",
+        isLegacy: true
     },
     // VA Atlas
     {
@@ -444,7 +447,8 @@ export const toolsData = [
         description: "VA ATLAS is a free, modern, and easy-to-use crew center for virtual airlines that offers advanced features like custom logins, staff-created challenges, and extensive tools for managing your VA.",
         imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/d/6/e/d6ec9c5faf13be59e20c5ad18b38ae9ba47e089a.png",
         tags: ["VA"],
-        link: "https://atlas.va-center.com/"
+        link: "https://atlas.va-center.com/",
+        isLegacy: true
     },
     // Ifc2
     {
@@ -521,13 +525,12 @@ export const toolsData = [
     // InFlight Flight Tracker
     {
         id: 53,
-        name: "InFlight Flight Tracker",
+        name: "InFlight",
         creator: "_ServerNoob",
         description: "InFlight Flight Tracker is a next-generation flight tracking and pilot utility for the Infinite Flight platform that includes primary flight displays, real-time tracking, and more! Customizable layouts available.",
         imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/3/b/f/3bfbd581fff8f20e83049b59b93e2053e4fa3ce0.png",
         tags: ["tracker"],
         link: "https://inflight.info/",
-        isBeta: true,
     },
     // IF-Skyroute
     {
@@ -590,7 +593,7 @@ export const toolsData = [
         isBeta: true,
         description: "This new tracker allows users to monitor live PVA flights, view pilot activity, and follow operations in real time, all through a smooth and user-friendly interface. The app has been developed to support transparency, engagement, and operational awareness within Pakistan Virtual Airlines.",
         imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/d/b/2/db29f5dee31367b5d615293136711aef8fb3925b.png",
-        tags: ["tracker", "VA"],
+        tags: ["VA"],
         link: "https://pva-global--muhliscan.replit.app/",
     },
     // Route Mapper
@@ -611,7 +614,7 @@ export const toolsData = [
         isBeta: true,
         description: "Indian Virtual Flight Tracker is a real-time flight tracking tool for seeing and exploring the Infinite Flight skies for Indian Virtual Airlines.",
         imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/9/1/d/91d4b56a5791f8f872388d29829efd826ec66a4b.jpeg",
-        tags: ["tracker", "VA"],
+        tags: ["VA"],
         link: "https://inva-flight-tracker.vercel.app/",
     },
     // My Flight Routes
@@ -624,5 +627,68 @@ export const toolsData = [
         imageUrl: "https://myflightroutes.com/logo.svg",
         tags: ["fpl", "utility"],
         link: "https://myflightroutes.com/",
+    },
+    // TOD Calculator
+    {
+        id: 65,
+        name: "TOD Calculator",
+        creator: "Jaxx",
+        description: "The TOD (Top of Descent) Calculator is a tool helps Infinite Flight pilots easily calculate their Top of Descent distance and recommended vertical speed for a smooth descent. Based on Infinite Flight's tutorial",
+        imageUrl: "https://cdn.shopify.com/s/files/1/2773/1296/files/Infographic_of_Top_of_Descent_-_Pilot_Mall.png?v=1688074614",
+        tags: ["FPL", "utility"],
+        link: "https://stunt-magic-29211896.figma.site/",
+    },
+    // VACompany
+    {
+        id: 66,
+        name: "VACompany",
+        creator: "arnav_singh",
+        description: "A dedicated solutions provider built specifically for the Infinite Flight virtual airline community. We focus on helping virtual airlines operate at a higher standard by combining technology, design, and structured management tools into one streamlined service.",
+        imageUrl: "https://vacompany.vercel.app/images/VAC-VA-LIGHT.png",
+        tags: ["VA"],
+        link: "https://vacompany.vercel.app/",
+        isBeta: true,
+    },
+    // SimRoster
+
+    {
+        id: 67,
+        name: "SimRoster",
+        creator: "Babacar",
+        description: "SimRoster is a career simulator for Infinite Flight that allows you to fly for a real airline with a real career path. It includes a career progression system, daily flight assignments, realistic scheduling and rest days, full FAA/EASA-style logbook tracking, live weather integration and PIREP submission, certifications, type ratings, messages and contract management, multiple airlines, each with their theme identity and routes, connects with your phone’s calendar (if enabled), and more.",
+        imageUrl: "https://i.ibb.co/fVHxrTzL/Untitled-design-14.png",
+        tags: ["addons"],
+        link: "https://www.simroster.com/",
+    },
+    // IFATC Tracker
+    {
+        id: 68,
+        name: "IFATC Info",
+        creator: "Infinite Flight",
+        description: "IFATC Info is a tool that provides information about Infinite Flight ATC activity on where airports are active and where they are not and shows details of frequencies, airport METARs and more.",
+        imageUrl: "https://ifatc.org/static/images/ifatc-logo-white-green-no_wordmark.png",
+        tags: ["ATC", "Tracker", "utility"],
+        link: "https://ifatc.org",
+    },
+    // AeroBrief
+    {
+        id: 69,
+        name: "AeroBrief",
+        creator: "British.Airways",
+        description: "AeroBrief is a tool that provides a curated 'Flight Packet' designed to make you feel like a real airline captain without the 20-minute prep work. It includes precision planning, gate & taxi intelligence, the scenic log, and executive weather summary.",
+        imageUrl: "",
+        tags: ["utility"],
+        link: "https://flight-gate-logic.replit.app/",
+        isBeta: true,
+    },
+    // VABase
+    {
+        id: 70,
+        name: "VABase - Virtual Airline Database",
+        creator: "AeroVerse Devs",
+        description: "VABase is a virtual airline database that contains every virtual airline and its performance in Infinite Flight.",
+        imageUrl: "",
+        tags: ["VA", "utility"],
+        link: "https://v0-vabase.vercel.app/",
     },
 ]

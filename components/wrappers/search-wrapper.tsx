@@ -33,10 +33,10 @@ function SearchContent() {
   }
 
   return (
-    <div className="px-4 py-8 md:p-8 bg-secondaryOriginal rounded-4xl font-medium flex flex-col gap-6 h-full">
+    <div className="px-4 py-8 md:p-8 bg-secondaryOriginal dark:bg-gray-900 rounded-4xl font-medium flex flex-col gap-6 h-full">
       {/* Search Section */}
       <section className="flex flex-col gap-4">
-        <h1 className="text-2xl font-bold text-gray-700">Search Tools</h1>
+        <h1 className="text-2xl font-bold text-gray-700 dark:text-gray-300">Search Tools</h1>
         <form onSubmit={handleSearch} className="flex gap-2">
           <div className="flex-1 relative">
             <input 
@@ -45,7 +45,7 @@ function SearchContent() {
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search by name, categories, or developers..."
               className="w-full px-4 py-2.5 pr-10 rounded-lg bg-lightOriginal/50 
-                       placeholder:text-gray-400 text-gray-700
+                       placeholder:text-gray-400 text-gray-700 dark:text-gray-300
                        focus:outline-none focus:ring-2 focus:ring-accentOriginal/20"
             />
             <LuSearch className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400" />
@@ -65,13 +65,13 @@ function SearchContent() {
         {query ? (
           <>
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-lg font-semibold text-gray-700">
+              <h2 className="text-lg font-semibold text-gray-700 dark:text-gray-300">
                 Search Results ({filteredTools.length})
               </h2>
             </div>
 
             {filteredTools.length === 0 ? (
-              <div className="flex flex-col items-center justify-center py-12 text-gray-500">
+              <div className="flex flex-col items-center justify-center py-12 text-gray-500 dark:text-gray-300">
                 <p>No tools found</p>
                 <p className="text-sm mt-2">Try adjusting your search terms</p>
               </div>
@@ -95,13 +95,13 @@ function SearchContent() {
             )}
           </>
         ) : (
-          <div className="flex flex-col items-center justify-center py-12 text-gray-500">
+          <div className="flex flex-col items-center justify-center py-12 text-gray-500 dark:text-gray-300">
             <LuSearch className="w-12 h-12 mb-4 text-accentOriginal/50" />
             <p className="text-lg font-medium">Start searching for tools</p>
             <p className="text-sm mt-2">Find tools by name, categories, or developers</p>
 
             <div className="flex flex-col items-center gap-2 mt-4">
-              <span className="text-gray-500">or</span>
+              <span className="text-gray-500 dark:text-gray-300 ">or</span>
               <Link 
           href="/tools" 
           className="inline-flex items-center gap-2 bg-[#b58170] text-white px-4 py-2 rounded-xl

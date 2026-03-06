@@ -42,7 +42,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   if (!tool) return notFound()
 
   return (
-    <div className="px-4 py-8 md:p-8 bg-secondaryOriginal rounded-4xl font-medium flex flex-col gap-6 h-full">
+    <div className="px-4 py-8 md:p-8 bg-secondaryOriginal dark:bg-gray-900 rounded-4xl font-medium flex flex-col gap-6 h-full">
       {/* Back Button */}
       <Link 
         href="/tools" 
@@ -65,7 +65,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         {/* Tool Info */}
         <div className="flex-1">
           <div className="flex items-center gap-3">
-            <h1 className="text-2xl font-bold text-gray-700">{tool.name}</h1>
+            <h1 className="text-2xl font-bold text-gray-700 dark:text-gray-300">{tool.name}</h1>
             {tool.isBeta && (
               <span className="text-xs text-orange-100 bg-orange-400 px-2 py-0.5 rounded-full">
                 Beta
@@ -82,7 +82,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
       </div>
 
       {/* Description */}
-      <p className="text-gray-600">{tool.description || "No description available"} {tool.name.toLowerCase() === "aerolog" && <b><br/><br/>ONLY FOR LONG FLIGHTS, <a href="https://community.infiniteflight.com/t/officially-released-aerolog-log-your-flights-in-a-better-way/1078571/47?u=charlesacosta163" target="_blank" className="text-blue-500 hover:underline">CLICK HERE</a> TO LEARN MORE</b>}</p>
+      <p className="text-gray-600 dark:text-gray-300">{tool.description || "No description available"} {tool.name.toLowerCase() === "aerolog" && <b><br/><br/>ONLY FOR LONG FLIGHTS, <a href="https://community.infiniteflight.com/t/officially-released-aerolog-log-your-flights-in-a-better-way/1078571/47?u=charlesacosta163" target="_blank" className="text-blue-500 hover:underline">CLICK HERE</a> TO LEARN MORE</b>}</p>
 
       {/* Tags */}
       <div className="flex gap-2 flex-wrap">

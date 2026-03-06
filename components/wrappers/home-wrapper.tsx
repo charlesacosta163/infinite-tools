@@ -75,7 +75,7 @@ export default function HomeWrapper() {
   }, [])
 
   return (
-    <div className="px-4 py-8 md:p-8 bg-secondaryOriginal rounded-4xl font-medium flex flex-col items-center justify-center gap-6 h-full text-center relative overflow-hidden">
+    <div className="px-4 py-8 md:p-8 bg-secondaryOriginal dark:bg-gray-900 rounded-4xl font-medium flex flex-col items-center justify-center gap-6 h-full text-center relative overflow-hidden">
       {/* Background Icons */}
       {icons.map(icon => (
         <icon.Icon
@@ -94,7 +94,7 @@ export default function HomeWrapper() {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center gap-8 max-w-6xl mx-auto w-full">
         <div className="flex lg:flex-row flex-col">
-          <div className="flex items-center self-center gap-3 text-4xl lg:text-5xl font-bold tracking-tighter text-gray-700">
+          <div className="flex items-center self-center gap-3 text-4xl lg:text-5xl font-bold tracking-tighter text-gray-700 dark:text-gray-300">
             <FaToolbox className="text-[#b58170]" />
             <h1><span className="text-[#b58170]">Infinite</span>Toolbox</h1>
           </div>

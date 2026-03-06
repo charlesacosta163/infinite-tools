@@ -24,10 +24,10 @@ export default function CreatorsPage() {
   }, {} as Record<string, { name: string, tools: typeof toolsData }>)
 
   return (
-    <div className="px-4 py-8 md:p-8 bg-secondaryOriginal rounded-4xl font-medium flex flex-col gap-6 h-full">
+    <div className="px-4 py-8 md:p-8 bg-secondaryOriginal dark:bg-gray-900 rounded-4xl font-medium flex flex-col gap-6 h-full">
       <div className="text-center mb-4">
-        <h1 className="text-3xl font-bold text-gray-700 mb-2">App Developers</h1>
-        <p className="text-gray-500">
+        <h1 className="text-3xl font-bold text-gray-700 dark:text-gray-300 mb-2">App Developers</h1>
+        <p className="text-gray-500 dark:text-gray-300">
           Thank you to all the amazing developers who contribute to the wonderful world of the Infinite Flight ecosystem
         </p>
       </div>
@@ -38,7 +38,7 @@ export default function CreatorsPage() {
             key={creator.name}
             className="p-6 rounded-xl bg-lightOriginal/50 flex flex-col gap-4 self-start"
           >
-            <h2 className="text-xl font-bold text-gray-700">{creator.name}</h2>
+            <h2 className="text-xl font-bold text-gray-700 dark:text-gray-300">{creator.name}</h2>
             
             <div className="flex flex-col gap-3">
               <h3 className="text-sm font-semibold text-gray-500">Tools Created:</h3>
@@ -46,14 +46,14 @@ export default function CreatorsPage() {
                 <Link 
                   key={tool.id}
                   href={`/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="flex items-center justify-between p-3 rounded-lg bg-white/50 hover:bg-white transition-colors group"
+                  className="flex items-center justify-between p-3 rounded-lg bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800 transition-colors group"
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-full bg-light overflow-hidden">
                        { tool.imageUrl ? <img src={tool.imageUrl} alt={tool.name} className="w-full h-full object-cover" /> : <LuPlane className="w-full h-full object-cover" />}
                     </div>
                     <div>
-                      <p className="font-medium text-gray-700">{tool.name}</p>
+                      <p className="font-medium text-gray-700 dark:text-gray-300">{tool.name}</p>
                       <div className="flex gap-1 mt-1">
                         {tool.tags.map(tag => (
                           <span key={tag} className="text-xs px-2 py-0.5 rounded-full bg-lightOriginal text-orange-400">

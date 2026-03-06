@@ -54,8 +54,8 @@ const Sidebar = () => {
             <div className="grid grid-cols-2 gap-2">
               {
                 links.map((link, index) => (
-                  <Link key={index} href={link.path} className={`flex flex-col px-2 py-5 items-center rounded-md hover:bg-accentOriginal hover:text-white text-sm group cursor-pointer text-[#966554] tracking-tight transition-all duration-200 ${isActive(link.path) ? "bg-accentOriginal text-white [&>span]:text-white" : ""} ${index === links.length - 1 ? "col-span-2" : ""}`}>
-                    <span className='group-hover:text-white text-accentOriginal text-lg flex items-center justify-center rounded-md'>{link.icon}</span>
+                  <Link key={index} href={link.path} className={`flex flex-col px-2 py-5 items-center rounded-md hover:bg-accentOriginal dark:hover:bg-gray-800 hover:text-white text-sm group cursor-pointer text-[#966554] dark:text-orange-300 tracking-tight transition-all duration-200 ${isActive(link.path) ? "bg-accentOriginal dark:bg-gray-800 text-white [&>span]:text-white" : ""} ${index === links.length - 1 ? "col-span-2" : ""}`}>
+                    <span className='group-hover:text-white text-accentOriginal dark:text-orange-400 text-lg flex items-center justify-center rounded-md'>{link.icon}</span>
                     {link.name}
                   </Link>
                 ))

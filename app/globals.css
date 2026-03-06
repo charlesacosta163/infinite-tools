@@ -10,6 +10,13 @@
   --color-secondaryOriginal: #F7DED0;
   --color-accentOriginal: #E2BFB3;
 }
+
+.dark {
+  --color-lightOriginal: #2a2421;
+  --color-primaryOriginal: #d4906f;
+  --color-secondaryOriginal: #3a302a;
+  --color-accentOriginal: #c19a8d;
+}
 /* 
 @media (prefers-color-scheme: dark) {
   :root {

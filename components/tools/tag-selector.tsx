@@ -13,38 +13,60 @@ import { LuBot, LuSettings } from 'react-icons/lu'
 
 const categories = [{
    name: "All",
-   icon: <FaRegBuilding />
+   icon: <FaRegBuilding />,
+   color: "text-gray-600 dark:text-gray-400",
+   bgColor: "bg-gray-500 dark:bg-gray-600"
 }, {
    name: "Tracker",
-   icon: <MdTrackChanges />
+   icon: <MdTrackChanges />,
+   color: "text-blue-600 dark:text-blue-400",
+   bgColor: "bg-blue-500 dark:bg-blue-600"
 }, {
    name: "Stats",
-   icon: <MdOutlineQueryStats />
+   icon: <MdOutlineQueryStats />,
+   color: "text-green-600 dark:text-green-400",
+   bgColor: "bg-green-500 dark:bg-green-600"
 }, {
    name: "FPL",
-   icon: <TbRoute />
+   icon: <TbRoute />,
+   color: "text-purple-600 dark:text-purple-400",
+   bgColor: "bg-purple-500 dark:bg-purple-600"
 },
 {
    name: "API",
-   icon: <TbApiApp />
+   icon: <TbApiApp />,
+   color: "text-cyan-600 dark:text-cyan-400",
+   bgColor: "bg-cyan-500 dark:bg-cyan-600"
 }, {
    name: "VA",
-   icon: <MdOutlineAirlines />
+   icon: <MdOutlineAirlines />,
+   color: "text-red-600 dark:text-red-400",
+   bgColor: "bg-red-500 dark:bg-red-600"
 }, {
    name: "Logger",
-   icon: <TbFilePencil />
+   icon: <TbFilePencil />,
+   color: "text-amber-600 dark:text-amber-400",
+   bgColor: "bg-amber-500 dark:bg-amber-600"
 },{
    name: "Addons",
-   icon: <TbTools />
+   icon: <TbTools />,
+   color: "text-pink-600 dark:text-pink-400",
+   bgColor: "bg-pink-500 dark:bg-pink-600"
 }, {
    name: "ATC",
-   icon: <PiAirTrafficControlBold />
+   icon: <PiAirTrafficControlBold />,
+   color: "text-indigo-600 dark:text-indigo-400",
+   bgColor: "bg-indigo-500 dark:bg-indigo-600"
 }, {
    name: "Bots",
-   icon: <LuBot />
+   icon: <LuBot />,
+   color: "text-teal-600 dark:text-teal-400",
+   bgColor: "bg-teal-500 dark:bg-teal-600"
 }, {
    name: "Utility",
-   icon: <LuSettings />
+   icon: <LuSettings />,
+   color: "text-orange-600 dark:text-orange-400",
+   bgColor: "bg-orange-500 dark:bg-orange-600"
 }]
 
 export default function TagSelector() {
@@ -71,7 +93,7 @@ export default function TagSelector() {
    }
 
    return (
-     <section className="flex gap-3 flex-wrap border-b border-accentOriginal/20 pb-4">
+     <section className="flex gap-3 flex-wrap border-b border-accentOriginal/20 dark:border-orange-400/20 pb-4">
         {
             categories.map((category, index) => (
               <button 
@@ -81,8 +103,8 @@ export default function TagSelector() {
                   px-4 py-1.5 rounded-lg font-medium text-sm 
                   transition-all duration-200 ease-in-out cursor-pointer flex items-center gap-2
                   ${selectedCategory === category.name.toLowerCase() 
-                    ? "bg-accentOriginal text-white shadow-md shadow-accentOriginal/20 scale-105 !font-bold" 
-                    : "bg-lightOriginal/50 text-gray-500 hover:bg-lightOriginal hover:text-accentOriginal hover:scale-105"
+                    ? `${category.bgColor} text-white shadow-md scale-105 !font-bold [&>svg]:text-white` 
+                    : `bg-lightOriginal/50 dark:bg-gray-800 hover:bg-lightOriginal dark:hover:bg-gray-700 hover:scale-105 ${category.color}`
                   }
                 `}
               >

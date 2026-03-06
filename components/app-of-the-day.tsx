@@ -26,12 +26,12 @@ export default function AppOfTheDay() {
 
       <div className="rounded-3xl p-6 backdrop-blur-xs border-2 border-dashed border-accentOriginal">
         {/* Header */}
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex flex-col sm:flex-row items-center justify-between mb-4">
           <div className="flex items-center gap-2">
             <LuStar className="w-6 h-6 text-amber-400 fill-amber-400" />
-            <h2 className="text-2xl font-bold text-gray-700">Tool of the Day</h2>
+            <h2 className="text-2xl font-bold text-gray-700 dark:text-gray-300">Tool of the Day</h2>
           </div>
-          <div className="flex items-center gap-1.5 text-sm text-gray-500 bg-white/50 px-3 py-1.5 rounded-full">
+          <div className="flex items-center gap-1.5 text-sm text-gray-500 dark:text-gray-200 bg-white/50 px-3 py-1.5 rounded-full">
             <LuClock className="w-4 h-4" />
             <span>Refreshes Daily!</span>
           </div>

@@ -20,9 +20,9 @@ export default function BookmarksWrapper() {
   };
 
   return (
-    <div className="px-4 py-8 md:p-8 bg-secondaryOriginal rounded-4xl font-medium flex flex-col gap-4 h-full">
+    <div className="px-4 py-8 md:p-8 bg-secondaryOriginal dark:bg-gray-900 rounded-4xl font-medium flex flex-col gap-4 h-full">
       <header className="flex flex-col md:flex-row justify-between items-center">
-        <h1 className="text-2xl font-bold text-gray-700">Your Bookmarks</h1>
+        <h1 className="text-2xl font-bold text-gray-700 dark:text-gray-300">Your Bookmarks</h1>
         <span className="text-sm text-gray-500">{bookmarkedTools.length} tools bookmarked</span>
       </header>
 
