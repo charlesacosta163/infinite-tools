@@ -632,7 +632,7 @@ export const toolsData = [
     {
         id: 65,
         name: "TOD Calculator",
-        creator: "Jaxx",
+        creator: "Jaxx and DotWallop",
         description: "The TOD (Top of Descent) Calculator is a tool helps Infinite Flight pilots easily calculate their Top of Descent distance and recommended vertical speed for a smooth descent. Based on Infinite Flight's tutorial",
         imageUrl: "https://cdn.shopify.com/s/files/1/2773/1296/files/Infographic_of_Top_of_Descent_-_Pilot_Mall.png?v=1688074614",
         tags: ["FPL", "utility"],
