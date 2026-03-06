@@ -691,4 +691,14 @@ export const toolsData = [
         tags: ["VA", "utility"],
         link: "https://v0-vabase.vercel.app/",
     },
+    // YawBeach
+    {
+        id: 71,
+        name: "YawBeach",
+        creator: "Ekwueme and Team",
+        description: "YawBeach is a tool that bridges your USB joystick to Infinite Flight over WiFi. You can use it to fly your aircraft with a joystick.",
+        imageUrl: "https://www.yawbeach.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.2faa9dc3.webp&w=64&q=75",
+        tags: ["addons"],
+        link: "https://yawbeach.com/",
+    },
 ]
