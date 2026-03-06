@@ -116,7 +116,7 @@ export const toolsData = [
         name: "AeroLog",
         creator: "AeroVerse Devs",
         description: "AeroLog is a flight logbook for Infinite Flight that lets you log flights, view them on an interactive map, analyze and share stats, and has its striking automatic logging feature. Merged with AeroVectorX and AeroRadarX.",
-        imageUrl: "https://cdn.shopify.com/s/files/1/2773/1296/files/Components_of_a_Descent_Profile_-_Pilot_Mall.png?v=1738417563",
+        imageUrl: "https://aerolog.vercel.app/_next/image?url=%2Faerolog-logo.png&w=96&q=75",
         tags: ["logger"],
         link: "https://aerolog.vercel.app"
     },

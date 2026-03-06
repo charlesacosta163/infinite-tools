@@ -144,7 +144,7 @@ function ToolsContent() {
                   {tool.imageUrl ? (
                     <img src={tool.imageUrl} alt={tool.name} className="w-full h-full object-cover"/>
                   ) : (
-                    <LuPlane className="text-accent w-full h-full p-2"/>
+                    <LuPlane className="text-accent w-full h-full p-2 dark:text-white"/>
                   )}
                 </div>
                 <span className="text-sm font-semibold text-gray-600 dark:text-gray-300 text-center line-clamp-2">
