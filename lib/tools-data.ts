@@ -115,9 +115,9 @@ export const toolsData = [
         id: 11,
         name: "AeroLog",
         creator: "AeroVerse Devs",
-        description: "AeroLog is a flight logbook for Infinite Flight that lets you log flights, view them on an interactive map, analyze and share stats, and has its striking automatic logging feature. Merged with AeroVectorX and AeroRadarX.",
+        description: "AeroLog is a flight logbook and tracker for Infinite Flight that lets you log flights, view them on an interactive map, analyze and share stats, and has its striking automatic logging feature. Merged with AeroVectorX and AeroRadarX.",
         imageUrl: "https://aerolog.vercel.app/_next/image?url=%2Faerolog-logo.png&w=96&q=75",
-        tags: ["logger"],
+        tags: ["logger", "tracker", "android"],
         link: "https://aerolog.vercel.app"
     },
     // Infinite Aviators
@@ -553,15 +553,15 @@ export const toolsData = [
         link: "https://community.infiniteflight.com/t/under-fixing-iplanner-a-personalized-flight-planning-web-for-infinite-flight/1110663",
         isBeta: true,
     },
-    // Trackfinity
+    // NavCraft
     {
         id: 57,
-        name: "Trackfinity",
-        creator: "andrejtr",
-        description: "Trackfinity is a flight tracking tool for Infinite Flight that tracks flights and pilots in real-time.",
+        name: "NAVCRAFT",
+        creator: "AIMB_HULKMAN",
+        description: "NAVCRAFT is a free professional route planning tool for Infinite Flight. It contains features like an interactive map, OFP calculations, Airport details, and more.",
         imageUrl: "",
-        tags: ["tracker"],
-        link: "https://trackfinity.app/",
+        tags: ["FPL", "utility"],
+        link: "https://navcraftofp.netlify.app/",
         isBeta: true,
     },
     // InfiTracker
@@ -636,7 +636,7 @@ export const toolsData = [
         description: "The TOD (Top of Descent) Calculator is a tool helps Infinite Flight pilots easily calculate their Top of Descent distance and recommended vertical speed for a smooth descent. Based on Infinite Flight's tutorial",
         imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/b/0/5/b0580ff604f2b451212967b868b8677544b69971.jpeg",
         tags: ["FPL", "utility"],
-        link: "https://stunt-magic-29211896.figma.site/",
+        link: "https://tod-calculator.figma.site/",
     },
     // VACompany
     {

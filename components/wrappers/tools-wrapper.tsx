@@ -12,6 +12,8 @@ import { TbApiApp, TbFilePencil, TbRoute, TbTools } from 'react-icons/tb';
 import { PiAirTrafficControlBold } from 'react-icons/pi';
 import Link from "next/link";
 import { LuExternalLink, LuPlane } from "react-icons/lu";
+import { FaApple } from 'react-icons/fa';
+import { BsAndroid2 } from 'react-icons/bs';
 
 const tagIcons: Record<string, React.ReactElement> = {
   'tracker': <MdTrackChanges />,
@@ -23,7 +25,9 @@ const tagIcons: Record<string, React.ReactElement> = {
   'addons': <TbTools />,
   'atc': <PiAirTrafficControlBold />,
   'bots': <LuBot />,
-  'utility': <LuSettings />
+  'utility': <LuSettings />,
+  'android': <BsAndroid2 />,
+  'ios': <FaApple />,
 };
 
 const tagColors: Record<string, string> = {
@@ -36,7 +40,9 @@ const tagColors: Record<string, string> = {
   'addons': 'bg-pink-500 dark:bg-pink-600',
   'atc': 'bg-indigo-500 dark:bg-indigo-600',
   'bots': 'bg-teal-500 dark:bg-teal-600',
-  'utility': 'bg-orange-500 dark:bg-orange-600'
+  'utility': 'bg-orange-500 dark:bg-orange-600',
+  'android': 'bg-lime-500 dark:bg-lime-600',
+  'ios': 'bg-neutral-500 dark:bg-neutral-600',
 };
 
 function ToolsContent() {

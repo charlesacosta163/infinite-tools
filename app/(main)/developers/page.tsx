@@ -1,8 +1,16 @@
 import { Metadata } from 'next'
 import { toolsData } from '@/lib/tools-data'
 import Link from 'next/link'
-import { LuExternalLink, LuPlane, LuUser } from 'react-icons/lu'
+import { LuBot, LuExternalLink, LuPlane, LuSettings, LuUser } from 'react-icons/lu'
 import { capitalize } from '@/lib/utils'
+
+
+import { FaApple } from 'react-icons/fa'
+import { BsAndroid2 } from 'react-icons/bs'
+import { MdOutlineAirlines, MdOutlineQueryStats, MdTrackChanges } from 'react-icons/md'
+import { TbApiApp, TbFilePencil, TbTools } from 'react-icons/tb'
+import { TbRoute } from 'react-icons/tb'
+import { PiAirTrafficControlBold } from 'react-icons/pi'
 
 export const metadata: Metadata = {
   title: 'App Developers - InfiniteToolbox',
@@ -22,6 +30,36 @@ export default function CreatorsPage() {
     acc[tool.creator].tools.push(tool)
     return acc
   }, {} as Record<string, { name: string, tools: typeof toolsData }>)
+
+  const tagIcons: Record<string, React.ReactElement> = {
+    'tracker': <MdTrackChanges />,
+    'stats': <MdOutlineQueryStats />,
+    'fpl': <TbRoute />,
+    'api': <TbApiApp />,
+    'va': <MdOutlineAirlines />,
+    'logger': <TbFilePencil />,
+    'addons': <TbTools />,
+    'atc': <PiAirTrafficControlBold />,
+    'bots': <LuBot />,
+    'utility': <LuSettings />,
+    'android': <BsAndroid2 />,
+    'ios': <FaApple />,
+  };
+
+  const tagTextColors: Record<string, string> = {
+    'tracker': 'text-blue-600 dark:text-blue-400',
+    'stats':   'text-green-600 dark:text-green-400',
+    'fpl':     'text-purple-600 dark:text-purple-400',
+    'api':     'text-cyan-600 dark:text-cyan-400',
+    'va':      'text-red-600 dark:text-red-400',
+    'logger':  'text-amber-600 dark:text-amber-400',
+    'addons':  'text-pink-600 dark:text-pink-400',
+    'atc':     'text-indigo-600 dark:text-indigo-400',
+    'bots':    'text-teal-600 dark:text-teal-400',
+    'utility': 'text-orange-600 dark:text-orange-400',
+    'android': 'text-lime-600 dark:text-lime-400',
+    'ios':     'text-neutral-600 dark:text-neutral-400',
+  };
 
   return (
     <div className="px-4 py-8 md:p-8 bg-secondaryOriginal dark:bg-gray-900 rounded-4xl font-medium flex flex-col gap-6 h-full">
@@ -54,9 +92,15 @@ export default function CreatorsPage() {
                     </div>
                     <div>
                       <p className="font-medium text-gray-700 dark:text-gray-300">{tool.name}</p>
-                      <div className="flex gap-1 mt-1">
+                      <div className="flex gap-1 flex-wrap mt-1">
                         {tool.tags.map(tag => (
-                          <span key={tag} className="text-xs px-2 py-0.5 rounded-full bg-lightOriginal text-orange-400">
+                          <span
+                            key={tag}
+                            className={`flex items-center gap-1 text-xs px-2 py-0.5 rounded-full bg-lightOriginal dark:bg-gray-800 ${tagTextColors[tag.toLowerCase()] ?? 'text-orange-400'}`}
+                          >
+                            {tagIcons[tag.toLowerCase()] && (
+                              <span className="[&>svg]:w-3 [&>svg]:h-3">{tagIcons[tag.toLowerCase()]}</span>
+                            )}
                             {capitalize(tag)}
                           </span>
                         ))}

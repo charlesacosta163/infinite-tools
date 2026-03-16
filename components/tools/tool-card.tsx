@@ -9,6 +9,8 @@ import { PiAirTrafficControlBold } from 'react-icons/pi';
 import { capitalize } from "@/lib/utils";
 import Link from "next/link";
 import React from 'react';
+import { BsAndroid2 } from 'react-icons/bs';
+import { FaApple } from 'react-icons/fa';
 
 const tagIcons: Record<string, React.ReactElement> = {
   tracker: <MdTrackChanges />,
@@ -21,6 +23,8 @@ const tagIcons: Record<string, React.ReactElement> = {
   atc: <PiAirTrafficControlBold />,
   bots: <LuBot />,
   utility: <LuSettings />,
+  android: <BsAndroid2 />,
+  ios: <FaApple />,
 };
 
 const tagTextColors: Record<string, string> = {
@@ -34,6 +38,8 @@ const tagTextColors: Record<string, string> = {
   atc:     'text-indigo-600 dark:text-indigo-400',
   bots:    'text-teal-600 dark:text-teal-400',
   utility: 'text-orange-600 dark:text-orange-400',
+  android: 'text-lime-600 dark:text-lime-400',
+  ios: 'text-neutral-600 dark:text-neutral-400',
 };
 
 type ToolCardProps = {
@@ -112,15 +118,16 @@ type ToolCardProps = {
         <footer className="flex justify-between items-center gap-2">
            <div className="flex gap-2 flex-wrap">
               {tags.map(tag => (
-                <span
+                <Link
                   key={tag}
-                  className={`flex items-center gap-1 text-xs px-3 py-1 rounded-lg bg-lightOriginal dark:bg-gray-800 ${tagTextColors[tag.toLowerCase()] ?? 'text-orange-400'}`}
+                  href={`/tools?category=${tag.toLowerCase()}`}
+                  className={`flex items-center gap-1 text-xs px-3 py-1 rounded-lg bg-lightOriginal dark:bg-gray-800 hover:opacity-80 transition-opacity ${tagTextColors[tag.toLowerCase()] ?? 'text-orange-400'}`}
                 >
                   {tagIcons[tag.toLowerCase()] && (
                     <span className="[&>svg]:w-3 [&>svg]:h-3">{tagIcons[tag.toLowerCase()]}</span>
                   )}
                   {capitalize(tag)}
-                </span>
+                </Link>
               ))}
            </div>
            {
@@ -130,11 +137,11 @@ type ToolCardProps = {
               <div className="flex gap-2 items-center">
                 <Link 
                   href={`/tools/${name.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="flex gap-2 items-center px-3 py-2 rounded-lg bg-accentOriginal hover:bg-accentOriginal/80 text-lightOriginal dark:text-white font-bold"
+                  className="flex gap-2 items-center px-3 py-2 rounded-lg bg-accentOriginal hover:bg-accentOriginal/80 dark:bg-orange-500/20 dark:hover:bg-orange-400/30 text-white font-bold"
                 >
                   <LuInfo />
                 </Link>
-                <Link href={link} target="_blank" className="flex gap-2 items-center px-3 py-2 rounded-lg bg-primaryOriginal hover:bg-primaryOriginal/80 text-lightOriginal dark:text-white font-bold"><LuExternalLink /></Link>
+                <Link href={link} target="_blank" className="flex gap-2 items-center px-3 py-2 rounded-lg bg-primaryOriginal hover:bg-primaryOriginal/80 dark:bg-sky-600/20 dark:hover:bg-sky-500/30 text-white font-bold"><LuExternalLink /></Link>
               </div>
             )
            }

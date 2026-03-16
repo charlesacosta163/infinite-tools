@@ -2,7 +2,44 @@ import { Metadata } from 'next'
 import { toolsData } from '@/lib/tools-data'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { LuArrowLeft, LuPlane } from 'react-icons/lu'  // Import the arrow icon
+import { LuArrowLeft, LuPlane, LuBot, LuSettings } from 'react-icons/lu'
+import { MdTrackChanges, MdOutlineQueryStats, MdOutlineAirlines } from 'react-icons/md'
+import { TbApiApp, TbFilePencil, TbRoute, TbTools } from 'react-icons/tb'
+import { PiAirTrafficControlBold } from 'react-icons/pi'
+import { BsAndroid2 } from 'react-icons/bs'
+import { FaApple } from 'react-icons/fa'
+import { capitalize } from '@/lib/utils'
+import React from 'react'
+
+const tagIcons: Record<string, React.ReactElement> = {
+  tracker: <MdTrackChanges />,
+  stats:   <MdOutlineQueryStats />,
+  fpl:     <TbRoute />,
+  api:     <TbApiApp />,
+  va:      <MdOutlineAirlines />,
+  logger:  <TbFilePencil />,
+  addons:  <TbTools />,
+  atc:     <PiAirTrafficControlBold />,
+  bots:    <LuBot />,
+  utility: <LuSettings />,
+  android: <BsAndroid2 />,
+  ios:     <FaApple />,
+}
+
+const tagTextColors: Record<string, string> = {
+  tracker: 'text-blue-600 dark:text-blue-400',
+  stats:   'text-green-600 dark:text-green-400',
+  fpl:     'text-purple-600 dark:text-purple-400',
+  api:     'text-cyan-600 dark:text-cyan-400',
+  va:      'text-red-600 dark:text-red-400',
+  logger:  'text-amber-600 dark:text-amber-400',
+  addons:  'text-pink-600 dark:text-pink-400',
+  atc:     'text-indigo-600 dark:text-indigo-400',
+  bots:    'text-teal-600 dark:text-teal-400',
+  utility: 'text-orange-600 dark:text-orange-400',
+  android: 'text-lime-600 dark:text-lime-400',
+  ios:     'text-neutral-600 dark:text-neutral-400',
+}
 
 // Generate static params for all tools
 export async function generateStaticParams() {
@@ -46,7 +83,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
       {/* Back Button */}
       <Link 
         href="/tools" 
-        className="self-start flex items-center gap-2 text-gray-500 hover:text-gray-700 transition-colors group"
+        className="self-start flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors group"
       >
         <LuArrowLeft className="group-hover:-translate-x-1 transition-transform" />
         Back to Tools
@@ -81,26 +118,30 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         </div>
       </div>
 
-      {/* Description */}
-      <p className="text-gray-600 dark:text-gray-300">{tool.description || "No description available"} {tool.name.toLowerCase() === "aerolog" && <b><br/><br/>ONLY FOR LONG FLIGHTS, <a href="https://community.infiniteflight.com/t/officially-released-aerolog-log-your-flights-in-a-better-way/1078571/47?u=charlesacosta163" target="_blank" className="text-blue-500 hover:underline">CLICK HERE</a> TO LEARN MORE</b>}</p>
+      <p className="text-gray-600 dark:text-gray-300">{tool.description || "No description available"}</p>
 
-      {/* Tags */}
       <div className="flex gap-2 flex-wrap">
         {tool.tags.map(tag => (
-          <span key={tag} className="text-sm px-3 py-1 rounded-lg bg-lightOriginal text-orange-400">
-            {tag}
-          </span>
+          <Link
+            key={tag}
+            href={`/tools?category=${tag.toLowerCase()}`}
+            className={`flex items-center gap-1 text-sm px-3 py-1 rounded-lg bg-lightOriginal dark:bg-gray-800 hover:bg-lightOriginal/80 dark:hover:bg-gray-800/80 transition-colors ${tagTextColors[tag.toLowerCase()] ?? 'text-orange-400'}`}
+          >
+            {tagIcons[tag.toLowerCase()] && (
+              <span className="[&>svg]:w-3.5 [&>svg]:h-3.5">{tagIcons[tag.toLowerCase()]}</span>
+            )}
+            {capitalize(tag)}
+          </Link>
         ))}
       </div>
 
-      {/* Visit Button */}
       {!tool.isLegacy && (
         <a 
           href={tool.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="self-start px-6 py-2.5 rounded-lg bg-accentOriginal text-white 
-                   font-semibold hover:bg-accentOriginal/90 transition-colors"
+          className="self-start px-6 py-2.5 rounded-lg bg-accentOriginal dark:bg-orange-500/20 dark:hover:bg-orange-400/30 text-white 
+                   font-semibold hover:bg-accentOriginal/90 dark:hover:bg-orange-400/40 transition-colors"
         >
           Visit Website
         </a>

@@ -3,13 +3,14 @@ import { useEffect, useState} from 'react'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
 import { MdTrackChanges, MdOutlineQueryStats, MdOutlineAirlines, MdOutlineCalendarMonth } from 'react-icons/md'
-import { FaRegBuilding } from 'react-icons/fa'
+import { FaApple, FaRegBuilding } from 'react-icons/fa'
 import { TbApiApp, TbFilePencil, TbRoute, TbTools } from 'react-icons/tb'
 import { GrResources } from 'react-icons/gr'
 import { PiAirTrafficControlBold } from 'react-icons/pi'
 import { getToolCategoryAmounts } from '@/lib/actions'
 import { toolsData } from '@/lib/tools-data';
 import { LuBot, LuSettings } from 'react-icons/lu'
+import { BsAndroid2 } from 'react-icons/bs'
 
 const categories = [{
    name: "All",
@@ -46,7 +47,7 @@ const categories = [{
    name: "Logger",
    icon: <TbFilePencil />,
    color: "text-amber-600 dark:text-amber-400",
-   bgColor: "bg-amber-500 dark:bg-amber-600"
+   bgColor: "bg-yellow-400 dark:bg-yellow-500"
 },{
    name: "Addons",
    icon: <TbTools />,
@@ -67,6 +68,16 @@ const categories = [{
    icon: <LuSettings />,
    color: "text-orange-600 dark:text-orange-400",
    bgColor: "bg-orange-500 dark:bg-orange-600"
+}, {
+   name: "Android",
+   icon: <BsAndroid2 />,
+   color: "text-lime-600 dark:text-lime-400",
+   bgColor: "bg-lime-500 dark:bg-lime-600"
+}, {
+   name: "iOS",
+   icon: <FaApple />,
+   color: "text-neutral-600 dark:text-neutral-400",
+   bgColor: "bg-neutral-500 dark:bg-neutral-600"
 }]
 
 export default function TagSelector() {

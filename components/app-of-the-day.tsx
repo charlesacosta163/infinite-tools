@@ -2,9 +2,45 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { LuExternalLink, LuPlane, LuStar, LuClock } from 'react-icons/lu'
+import { LuExternalLink, LuPlane, LuStar, LuClock, LuBot, LuSettings } from 'react-icons/lu'
+import { MdTrackChanges, MdOutlineQueryStats, MdOutlineAirlines } from 'react-icons/md'
+import { TbApiApp, TbFilePencil, TbRoute, TbTools } from 'react-icons/tb'
+import { PiAirTrafficControlBold } from 'react-icons/pi'
+import { BsAndroid2 } from 'react-icons/bs'
+import { FaApple } from 'react-icons/fa'
 import { getAppOfTheDay } from '@/lib/app-of-the-day'
 import { capitalize } from '@/lib/utils'
+import React from 'react'
+
+const tagIcons: Record<string, React.ReactElement> = {
+  tracker: <MdTrackChanges />,
+  stats:   <MdOutlineQueryStats />,
+  fpl:     <TbRoute />,
+  api:     <TbApiApp />,
+  va:      <MdOutlineAirlines />,
+  logger:  <TbFilePencil />,
+  addons:  <TbTools />,
+  atc:     <PiAirTrafficControlBold />,
+  bots:    <LuBot />,
+  utility: <LuSettings />,
+  android: <BsAndroid2 />,
+  ios:     <FaApple />,
+}
+
+const tagTextColors: Record<string, string> = {
+  tracker: 'text-blue-600 dark:text-blue-400',
+  stats:   'text-green-600 dark:text-green-400',
+  fpl:     'text-purple-600 dark:text-purple-400',
+  api:     'text-cyan-600 dark:text-cyan-400',
+  va:      'text-red-600 dark:text-red-400',
+  logger:  'text-amber-600 dark:text-amber-400',
+  addons:  'text-pink-600 dark:text-pink-400',
+  atc:     'text-indigo-600 dark:text-indigo-400',
+  bots:    'text-teal-600 dark:text-teal-400',
+  utility: 'text-orange-600 dark:text-orange-400',
+  android: 'text-lime-600 dark:text-lime-400',
+  ios:     'text-neutral-600 dark:text-neutral-400',
+}
 
 export default function AppOfTheDay() {
   const [app, setApp] = useState(getAppOfTheDay())
@@ -78,12 +114,16 @@ export default function AppOfTheDay() {
               {/* Tags */}
               <div className="flex gap-2 flex-wrap">
                 {app.tags.map(tag => (
-                  <span 
-                    key={tag} 
-                    className="text-xs px-3 py-1 rounded-full bg-gradient-to-r from-orange-100 to-pink-100 text-orange-600 font-medium"
+                  <Link
+                    key={tag}
+                    href={`/tools?category=${tag.toLowerCase()}`}
+                    className={`flex items-center gap-1 text-xs px-3 py-1 rounded-full bg-lightOriginal dark:bg-gray-800 font-medium hover:opacity-80 transition-opacity ${tagTextColors[tag.toLowerCase()] ?? 'text-orange-400'}`}
                   >
+                    {tagIcons[tag.toLowerCase()] && (
+                      <span className="[&>svg]:w-3 [&>svg]:h-3">{tagIcons[tag.toLowerCase()]}</span>
+                    )}
                     {capitalize(tag)}
-                  </span>
+                  </Link>
                 ))}
               </div>
 
