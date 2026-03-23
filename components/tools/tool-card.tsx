@@ -52,7 +52,7 @@ type ToolCardProps = {
     link: string,
     isBeta?: boolean
     isLegacy?: boolean
-    previewImages: string[]
+    previewImages?: string[]
   }
   
   export function ToolCard({id, name, creator, description, imageUrl, tags, link, isBeta, isLegacy, previewImages}: ToolCardProps) {
