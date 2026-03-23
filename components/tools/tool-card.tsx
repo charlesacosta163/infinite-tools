@@ -117,7 +117,7 @@ type ToolCardProps = {
         </div>
         
         <section className="flex flex-col gap-2">
-        {previewImages.length > 0 && (
+        {previewImages && previewImages.length > 0 && (
           <span className="text-xs text-green-800 dark:text-green-200 animate-pulse">
             <LuEye className="inline" /> Previews Available
           </span>
