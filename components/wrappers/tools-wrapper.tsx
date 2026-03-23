@@ -117,6 +117,7 @@ function ToolsContent() {
               link={tool.link} 
               isBeta={tool.isBeta || false}
               isLegacy={tool.isLegacy || false}
+              previewImages={tool.previewImages ?? []}
             />
           ))}
         </section>

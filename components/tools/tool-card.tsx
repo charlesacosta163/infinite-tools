@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { getBookmarks, removeBookmark, addBookmark } from '@/lib/bookmark';
-import { LuExternalLink, LuPlane, LuBookmarkCheck, LuBookmark, LuInfo, LuBot, LuSettings } from "react-icons/lu";
+import { LuExternalLink, LuPlane, LuBookmarkCheck, LuBookmark, LuInfo, LuBot, LuSettings, LuEye } from "react-icons/lu";
 import { MdTrackChanges, MdOutlineQueryStats, MdOutlineAirlines } from 'react-icons/md';
 import { TbApiApp, TbFilePencil, TbRoute, TbTools } from 'react-icons/tb';
 import { PiAirTrafficControlBold } from 'react-icons/pi';
@@ -52,9 +52,10 @@ type ToolCardProps = {
     link: string,
     isBeta?: boolean
     isLegacy?: boolean
+    previewImages: string[]
   }
   
-  export function ToolCard({id, name, creator, description, imageUrl, tags, link, isBeta, isLegacy}: ToolCardProps) {
+  export function ToolCard({id, name, creator, description, imageUrl, tags, link, isBeta, isLegacy, previewImages}: ToolCardProps) {
     const [isBookmarked, setIsBookmarked] = useState(false);
   
     useEffect(() => {
@@ -114,38 +115,45 @@ type ToolCardProps = {
         <div className="overflow-auto text-sm font-medium bg-gray-100/30 dark:bg-gray-800/50 p-2 rounded-lg text-gray-500 dark:text-gray-400 w-full h-full">
           {description || "No description available"}
         </div>
-  
-        <footer className="flex justify-between items-center gap-2">
-           <div className="flex gap-2 flex-wrap">
-              {tags.map(tag => (
-                <Link
-                  key={tag}
-                  href={`/tools?category=${tag.toLowerCase()}`}
-                  className={`flex items-center gap-1 text-xs px-3 py-1 rounded-lg bg-lightOriginal dark:bg-gray-800 hover:opacity-80 transition-opacity ${tagTextColors[tag.toLowerCase()] ?? 'text-orange-400'}`}
-                >
-                  {tagIcons[tag.toLowerCase()] && (
-                    <span className="[&>svg]:w-3 [&>svg]:h-3">{tagIcons[tag.toLowerCase()]}</span>
-                  )}
-                  {capitalize(tag)}
-                </Link>
-              ))}
-           </div>
-           {
-            isLegacy ? (
-             <></>
-            ) : (
-              <div className="flex gap-2 items-center">
-                <Link 
-                  href={`/tools/${name.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="flex gap-2 items-center px-3 py-2 rounded-lg bg-accentOriginal hover:bg-accentOriginal/80 dark:bg-orange-500/20 dark:hover:bg-orange-400/30 text-white font-bold"
-                >
-                  <LuInfo />
-                </Link>
-                <Link href={link} target="_blank" className="flex gap-2 items-center px-3 py-2 rounded-lg bg-primaryOriginal hover:bg-primaryOriginal/80 dark:bg-sky-600/20 dark:hover:bg-sky-500/30 text-white font-bold"><LuExternalLink /></Link>
-              </div>
-            )
-           }
-        </footer>
+        
+        <section className="flex flex-col gap-2">
+        {previewImages.length > 0 && (
+          <span className="text-xs text-green-800 dark:text-green-200 animate-pulse">
+            <LuEye className="inline" /> Previews Available
+          </span>
+        )}
+          <footer className="flex justify-between items-center gap-2">
+            <div className="flex gap-2 flex-wrap">
+                {tags.map(tag => (
+                  <Link
+                    key={tag}
+                    href={`/tools?category=${tag.toLowerCase()}`}
+                    className={`flex items-center gap-1 text-xs px-3 py-1 rounded-lg bg-lightOriginal dark:bg-gray-800 hover:opacity-80 transition-opacity ${tagTextColors[tag.toLowerCase()] ?? 'text-orange-400'}`}
+                  >
+                    {tagIcons[tag.toLowerCase()] && (
+                      <span className="[&>svg]:w-3 [&>svg]:h-3">{tagIcons[tag.toLowerCase()]}</span>
+                    )}
+                    {capitalize(tag)}
+                  </Link>
+                ))}
+            </div>
+            {
+              isLegacy ? (
+              <></>
+              ) : (
+                <div className="flex gap-2 items-center">
+                  <Link 
+                    href={`/tools/${name.toLowerCase().replace(/\s+/g, '-')}`}
+                    className="flex gap-2 items-center px-3 py-2 rounded-lg bg-accentOriginal hover:bg-accentOriginal/80 dark:bg-orange-500/20 dark:hover:bg-orange-400/30 text-white font-bold"
+                  >
+                    <LuInfo />
+                  </Link>
+                  <Link href={link} target="_blank" className="flex gap-2 items-center px-3 py-2 rounded-lg bg-primaryOriginal hover:bg-primaryOriginal/80 dark:bg-sky-600/20 dark:hover:bg-sky-500/30 text-white font-bold"><LuExternalLink /></Link>
+                </div>
+              )
+            }
+          </footer>
+        </section>
       </div>
     )
   }
