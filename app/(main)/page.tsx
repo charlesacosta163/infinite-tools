@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     ],
     siteName: 'InfiniteToolbox',
     type: 'website',
-    url: 'https://infinitetools.vercel.app',
+    url: 'https://infinitetoolbox.vercel.app',
     locale: 'en_US',
   },
 }
