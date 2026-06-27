@@ -551,7 +551,7 @@ export const toolsData = [
         creator: "_ServerNoob",
         description: "InFlight Flight Tracker is a next-generation flight tracking and pilot utility for the Infinite Flight platform that includes primary flight displays, real-time tracking, and more! Customizable layouts available.",
         imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/3/b/f/3bfbd581fff8f20e83049b59b93e2053e4fa3ce0.png",
-        tags: ["tracker"],
+        tags: ["tracker", "iOS"],
         link: "https://inflight.info/",
         previewImages: ["https://global.discourse-cdn.com/infiniteflight/original/4X/a/9/f/a9f9db3229c9ee987718139a294be495bc46c959.jpeg", "https://global.discourse-cdn.com/infiniteflight/optimized/4X/9/3/c/93ccd9c32185b4a6c236bc1dc9cca415a2fb9807_2_1640x854.jpeg", "https://global.discourse-cdn.com/infiniteflight/original/4X/4/3/d/43d8916ac1b69dffec4b272d52dbde070ed08a22.jpeg","https://global.discourse-cdn.com/infiniteflight/original/4X/3/2/9/32925cd3bb4af7602527e0a0546db323197a2fce.png", "https://global.discourse-cdn.com/infiniteflight/optimized/4X/1/3/2/1323cfe073f2dc60de8c581912ecd42e9facaaaa_2_1418x1200.jpeg"]
     },
@@ -590,17 +590,15 @@ export const toolsData = [
         isBeta: true,
         previewImages: ["https://global.discourse-cdn.com/infiniteflight/optimized/4X/8/4/6/846098bb2a1a85801c9e250f10a462872fb0dbab_2_1640x812.jpeg", "https://global.discourse-cdn.com/infiniteflight/optimized/4X/3/b/d/3bd66e18c8f77f32328056223f3ee0abb607afd6_2_1640x982.jpeg"]
     },
-    // InfiTracker (PREVIEW DONE)
+    // IF-FlightDeck
     {
         id: 58,
-        name: "INFI-Tracker",
-        creator: "Mukundh_Ram",
-        description: "INFI-tracker is a real-time flight tracking tool for seeing and exploring the Infinite Flight skies. Satellite imagery available.",
-        imageUrl: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/mukundh_ram/288/1578725_2.png",
-        tags: ["tracker"],
-        isBeta: true,
-        link: "https://infi-tracker.online/",
-        previewImages: ["https://global.discourse-cdn.com/infiniteflight/original/4X/0/4/3/0437dd64e5b33255dfcbf46e6cf46609044b3350.jpeg", "https://global.discourse-cdn.com/infiniteflight/original/4X/8/3/a/83a79a69043be9991d09e8b7ecded18771d249cc.jpeg", "https://global.discourse-cdn.com/infiniteflight/optimized/4X/3/f/c/3fc7d3d8bdbeee5fc959fe62e5b7d80d8a8e0f4e_2_1384x1200.jpeg", "https://global.discourse-cdn.com/infiniteflight/original/4X/4/8/6/4866e689555872a10f868fe5f4ad1537931f783f.jpeg" ]
+        name: "IF Flight Deck",
+        creator: "AZ001",
+        description: "IF Flight Deck is a route planning companion for Infinite Flight that helps pilots quickly discover random flights based on filters like aircraft, distance, region, and flight time. It also provides airport and route details, making it easy to find new destinations and reduce the time spent deciding what to fly next.",
+        imageUrl: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/az001/288/648495_2.png",
+        tags: ["utility", "FPL"],
+        link: "https://if-flightdeck.lovable.app/"
     },
     // IF SimBrief Takeoff Performance to Takeoff Data Tool
     {
@@ -670,11 +668,11 @@ export const toolsData = [
     {
         id: 66,
         name: "VACompany",
-        creator: "arnav_singh",
+        creator: "Gurnoor1",
         description: "A dedicated solutions provider built specifically for the Infinite Flight virtual airline community. We focus on helping virtual airlines operate at a higher standard by combining technology, design, and structured management tools into one streamlined service.",
-        imageUrl: "https://vacompany.vercel.app/images/VAC-VA-LIGHT.png",
+        imageUrl: "https://vacompany.dpdns.org/images/VAC-VA-LIGHT.png",
         tags: ["VA"],
-        link: "https://vacompany.vercel.app/",
+        link: "https://vacompany.dpdns.org/",
         isBeta: true,
     },
     // SimRoster
@@ -762,5 +760,124 @@ export const toolsData = [
         tags: ["tracker", "utility"],
         link: "https://community.infiniteflight.com/t/i-m-building-a-airshow-for-infinite-flight/1164013",
         previewImages: ["https://global.discourse-cdn.com/infiniteflight/original/4X/0/6/3/06395f99287a8d5cd0dc4cd3e040f8d4b51ad53a.jpeg", "https://global.discourse-cdn.com/infiniteflight/optimized/4X/0/1/5/015b2ff9b4bd9222df7509a9dd2eaffa88ec5307_2_1640x922.jpeg", "https://global.discourse-cdn.com/infiniteflight/optimized/4X/9/b/8/9b82a90efbf18504a763d3406de4555a2804916f_2_1640x922.png", "https://global.discourse-cdn.com/infiniteflight/optimized/4X/7/c/e/7ce480a498d9fdc0a6e3eb504e5f028500b073fe_2_1640x922.jpeg", "https://global.discourse-cdn.com/infiniteflight/optimized/4X/3/e/9/3e97e79e0ac30f6188140a6e7361fa9f28282996_2_1640x922.png"]
+    },
+    // Flight Announce (PREVIEW DONE)
+    {
+        id: 75,
+        name: "Flight Announce",
+        creator: "Allen_Lu",
+        description: "Flight Announce is a companion app for Infinite Flight that adds immersive cabin announcements, copilot callouts, and realistic flight audio that automatically syncs with each phase of your flight. It connects through Infinite Flight Connect and offers customizable airline announcement packs, GPWS alerts, and other audio enhancements to create a more realistic flying experience.",
+        imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/b/b/6/bb6defd82e882466d4a69eb23c6afcd0e5fec56f.png",
+        tags: ["iOS", "addons"],
+        link: "https://community.infiniteflight.com/t/live-now-flight-announce-cabin-copilot-audio-for-infinite-flight/1218903",
+        previewImages: ["https://global.discourse-cdn.com/infiniteflight/optimized/4X/1/9/4/194197b8b13baf8f4de83907942d7a20966efebd_2_1640x800.jpeg", "https://global.discourse-cdn.com/infiniteflight/optimized/4X/a/9/5/a95a21bd8cb28a4a0bf8be3f3b1f236a67f83c65_2_594x1200.jpeg", "https://global.discourse-cdn.com/infiniteflight/optimized/4X/9/5/5/955691136f49e79e931524e081f9e1275b119f5f_2_590x1200.jpeg", "https://global.discourse-cdn.com/infiniteflight/optimized/4X/5/9/b/59b9f39b2d7d0b0953f858e66c56957f5f2d80ae_2_594x1200.jpeg"]
+    },
+    // The Infinite Developer
+    {
+        id: 76,
+        name: "The Infinite News Station",
+        creator: "Magicalchesecat & Arendiuz",
+        description: "The Infinite News Station is a news website that delivers the latest news, photos, and updates from the Infinite Flight community.",
+        imageUrl: "https://hugocnrd.github.io/infinite-news-station/logoint.jpg",
+        tags: ["utility"],
+        link: "https://hugocnrd.github.io/infinite-news-station/home.html",
+    },
+    // AirspaceIF
+    {
+        id: 77,
+        name: "AirspaceIF",
+        creator: "onechippaviation",
+        description: "AirspaceIF is a real-time flight tracking app for Infinite Flight that provides a clean, responsive radar map for monitoring live aircraft, ATC sectors, and server traffic across all servers.",
+        imageUrl: "https://global.discourse-cdn.com/infiniteflight/original/4X/9/6/1/961545d2204b882a5509fb7ab04e23273c3d7a24.jpeg",
+        tags: ["tracker"],
+        isBeta: true,
+        link: "https://airspaceif.vercel.app/",
+    },
+    // SkyYoke (PREVIEW DONE)
+    {
+        id: 78,
+        name: "SkyYoke",
+        creator: "CalvinV01",
+        description: "SkyYoke is a companion app that transforms an iPhone into a customizable flight control panel for Infinite Flight, allowing users to operate functions such as the yoke, throttle, flaps, landing gear, autopilot, and more through an intuitive touch interface. Using Infinite Flight Connect, it provides a more immersive and hardware-like flying experience without requiring dedicated physical equipment.",
+        imageUrl: "https://ifkits.com/icon-192.png",
+        tags: ["addons", "iOS"],
+        link: "https://ifkits.com/",
+        previewImages: ["https://global.discourse-cdn.com/infiniteflight/optimized/4X/1/7/b/17bcb04b1435e1f9bcf787b8750ae1fcc43c5ad9_2_1640x754.jpeg", "https://global.discourse-cdn.com/infiniteflight/optimized/4X/2/1/5/215587964921c5ae0b23996e22036c6e7e65cf95_2_1640x802.png", "https://global.discourse-cdn.com/infiniteflight/optimized/4X/7/8/2/7822f235d28347ebf73847d01b255d1fdf56fa3d_2_1640x754.jpeg", "https://global.discourse-cdn.com/infiniteflight/optimized/4X/b/6/7/b67f6e355c3aa1420206d0bb6413c22910e56c41_2_1640x802.png", "https://global.discourse-cdn.com/infiniteflight/optimized/4X/d/e/c/dece5412c83f10a534f2a56c24f931c8c1d8e770_2_1640x802.png"]
+    },
+    // SkyView
+    {
+        id: 79,
+        name: "SkyLog Live",
+        creator: "Noah6132",
+        description: "SkyLog Live is a flight tracker app for Infinite Flight that provides live tracking, flight plans, ATC information, airport boards, and more!",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL9h9rM9W-0zyN5W9TUzXoGDkYcnzFEY89Qkm2xnAhAw&s=10",
+        tags: ["tracker"],
+        isBeta: true,
+        link: "https://skyview-live.lovable.app/"
+    },
+    // Aileron
+    {
+        id: 80,
+        name: "Aileron",
+        creator: "AviatorChina & Team",
+        description: "Aileron is a web service where it creates a website for your virtual airline, including services such as a homepage, fleet and route pages, an about/staff section, and a pilot application form; all in your own colours and branding.",
+        imageUrl: "https://global.discourse-cdn.com/infiniteflight/optimized/4X/1/f/f/1ff978a4e5bc38b71156457e2a85e9e40d7b4ff1_2_1638x224.png",
+        tags: ["utility"],
+        link: "https://aileronifc.vercel.app/"
+    },
+    // Contrail
+    {
+        id: 81,
+        name: "Contrail",
+        creator: "AviatorChina & Team",
+        description: "Contrail is a free personal flightbook that maps your whole Infinite Flight journey — routes, hours, countries, aircraft — and can log it for you automatically.",
+        imageUrl: "https://global.discourse-cdn.com/infiniteflight/optimized/4X/a/7/9/a79cfc98f279b71e9d993857087fc2e24410775e_2_1640x460.png",
+        tags: ["logger"],
+        isBeta: true,
+        link: "https://contraillog.vercel.app/"
+    },
+    // Stratos
+    {
+        id: 82,
+        name: "Stratos",
+        creator: "AviatorChina & Team",
+        description: "Stratos is a complete, fully-branded crew center any VA can spin up: roster, PIREPs, ranks, routes & live map, events, Frequent Flyer points, awards, analytics — even your own custom domain, white-labeled.",
+        imageUrl: "https://global.discourse-cdn.com/infiniteflight/optimized/4X/b/1/6/b16625f1dc4d10acb76a87e7131abfb39ef689ec_2_1640x532.png",
+        tags: ["VA"],
+        link: "https://ifconnectv2.vercel.app/"
+    },
+    // AeroHub Radar
+    {
+        id: 83,
+        name: "AeroHub Radar",
+        creator: "AeroHub Team",
+        description: "AeroHub Radar is a real-time flight tracking app for Infinite Flight that provides a clean, responsive radar map for monitoring live aircraft, ATC sectors, and server traffic across all servers.",
+        imageUrl: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/aerohub/96/1694254_2.png",
+        tags: ["tracker"],
+        isBeta: true,
+        link: "https://aerohubradar.com/",
+        previewImages: ["https://global.discourse-cdn.com/infiniteflight/original/4X/4/1/f/41f6fd2481d34b16d16c7fc2d6d944ff29abe353.png"]
+    },
+    // InfiniteMap 
+    {
+        id: 84,
+        name: "InfiniteMap",
+        creator: "Flugsohn & Team",
+        description: "InfiniteMap is a real-time, browser-based map that lets you track flights across all Infinite Flight servers – Casual, Training, and Expert. Whether you’re flying yourself or just plane-spotting, InfiniteMap brings the skies to your screen in a clean and user-friendly interface",
+        imageUrl: "https://infinitemap.net/infinitemap%20logo.png",
+        tags: ["tracker"],
+        isBeta: true,
+        link: "https://infinitemap.net/",
+        previewImages: ["https://global.discourse-cdn.com/infiniteflight/original/4X/f/2/2/f22216b88c74213fdeaa737334069aa248cd9ae1.png","https://infinitemap.net/tracker-showcase-fresh.png", "https://global.discourse-cdn.com/infiniteflight/original/4X/3/d/9/3d9f7aa03937a3838773f9631c90d5edddb853ae.png"]
+    },
+    // The Infinite Developer
+    {
+        id: 85,
+        name: "The Infinite Developer",
+        creator: "Arendiuz",
+        description: "The Infinite Developer is a web service focused on the Infinite Flight community, creating custom websites for Virtual Airlines (VAs), Virtual Organizations (VOs), and other third-party projects.",
+        imageUrl: "",
+        tags: ["utility"],
+        link: "https://community.infiniteflight.com/t/the-infinite-developer-designing-your-va-vo-third-party-website/1221804"
     },
 ]

@@ -106,7 +106,7 @@ const Navbar = () => {
               <Banner />
               <div className="mt-2 bg-gradient-to-br from-gray-800 to-gray-900 py-4 px-2 rounded-xl text-white flex flex-col items-center justify-between gap-3 relative overflow-hidden">
            <TbHomeInfinity className="absolute -left-0 -bottom-6 w-36 h-36 text-white/5" />
-           <p className='text-sm font-medium relative z-10'>Infinite Flight Community</p>
+           <p className='text-lg text-center tracking-tighter relative z-10 font-black'>Infinite Flight Community</p>
            <Link 
            target='_blank'
              href="https://community.infiniteflight.com/t/infinitetoolbox-an-all-in-one-directory-for-infinite-flight-third-party-apps/1080167?u=charlesacosta163" 

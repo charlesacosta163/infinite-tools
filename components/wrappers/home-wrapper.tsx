@@ -105,7 +105,7 @@ export default function HomeWrapper() {
             </p>
 
             <Link 
-              href="/search" 
+              href="/tools" 
               className="self-center inline-flex items-center gap-2 bg-[#b58170] text-white px-6 py-3 rounded-xl
                         font-semibold hover:gap-4 transition-all duration-300 hover:bg-accentOriginal/90"
             >
