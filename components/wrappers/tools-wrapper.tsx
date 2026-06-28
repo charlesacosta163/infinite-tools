@@ -82,7 +82,7 @@ function ToolsContent() {
             onClick={() => setViewMode('normal')}
             className={`p-2 rounded-lg transition-all ${
               viewMode === 'normal'
-                ? 'bg-accentOriginal text-white'
+                ? 'bg-accentOriginal dark:bg-gray-700 text-white'
                 : 'bg-lightOriginal/50 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-lightOriginal dark:hover:bg-gray-700'
             }`}
             title="Normal View"
@@ -93,7 +93,7 @@ function ToolsContent() {
             onClick={() => setViewMode('mini')}
             className={`p-2 rounded-lg transition-all ${
               viewMode === 'mini'
-                ? 'bg-accentOriginal text-white'
+                ? 'bg-accentOriginal dark:bg-gray-700 text-white'
                 : 'bg-lightOriginal/50 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-lightOriginal dark:hover:bg-gray-700'
             }`}
             title="Mini View"
@@ -130,7 +130,7 @@ function ToolsContent() {
             >
               {/* Tag Icons - Top Right */}
               <div className="absolute -top-2 -left-2 flex gap-1">
-                {tool.tags.slice(0, 2).map((tag, idx) => {
+                {tool.tags.slice(0, 3).map((tag, idx) => {
                   const icon = tagIcons[tag.toLowerCase()];
                   const color = tagColors[tag.toLowerCase()];
                   if (!icon) return null;

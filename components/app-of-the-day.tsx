@@ -67,18 +67,18 @@ export default function AppOfTheDay() {
             <LuStar className="w-6 h-6 text-amber-400 fill-amber-400" />
             <h2 className="text-2xl font-bold text-gray-700 dark:text-gray-300">Tool of the Day</h2>
           </div>
-          <div className="flex items-center gap-1.5 text-sm text-gray-500 dark:text-gray-200 bg-white/50 px-3 py-1.5 rounded-full">
+          <div className="flex items-center gap-1.5 text-sm text-gray-500 dark:text-gray-200 bg-white/50 dark:bg-gray-800/50 px-3 py-1.5 rounded-full">
             <LuClock className="w-4 h-4" />
             <span>Refreshes Daily!</span>
           </div>
         </div>
 
         {/* App Card */}
-        <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-5 border-2 border-dashed border-orange-300">
+        <div className="bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-5 border-2 border-dashed border-orange-300">
           <div className="flex flex-col md:flex-row gap-5">
             {/* App Icon */}
             <div className="flex-shrink-0">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-orange-200 to-pink-200 overflow-hidden border-2 border-white shadow-lg">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-orange-200 to-pink-200 dark:from-orange-800 dark:to-pink-800 overflow-hidden border-2 border-white dark:border-gray-800 shadow-lg">
                 {app.imageUrl ? (
                   <img 
                     src={app.imageUrl} 
@@ -97,17 +97,17 @@ export default function AppOfTheDay() {
             <div className="flex-1 flex flex-col gap-2">
               <div>
                 <div className="flex items-center gap-2 flex-wrap">
-                  <h3 className="text-xl font-bold text-gray-700">{app.name}</h3>
+                  <h3 className="text-xl font-bold text-gray-700 dark:text-gray-300">{app.name}</h3>
                   {app.isBeta && (
                     <span className="text-xs text-orange-100 bg-orange-500 px-2 py-0.5 rounded-full font-semibold">
                       Beta
                     </span>
                   )}
                 </div>
-                <p className="text-sm text-gray-600 mt-0.5 text-left">by {app.creator}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-0.5 text-left">by {app.creator}</p>
               </div>
 
-              <p className="text-sm text-gray-600 text-left bg-white/50 p-2 rounded-lg">
+              <p className="text-sm text-gray-600 dark:text-gray-400 text-left bg-white/50 dark:bg-gray-800/50 p-2 rounded-lg">
                 {app.description}
               </p>
 
