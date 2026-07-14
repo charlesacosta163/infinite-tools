@@ -880,4 +880,35 @@ export const toolsData = [
         tags: ["utility"],
         link: "https://community.infiniteflight.com/t/the-infinite-developer-designing-your-va-vo-third-party-website/1221804"
     },
+    // Waypoint Live
+    {
+        id: 86,
+        name: "Waypoint",
+        creator: "anothergerman and Team",
+        description: "Waypoint is a free live map and radar platform for Infinite Flight that displays real-time traffic across the Expert, Training, and Casual servers. It features aircraft-specific map icons, airline and livery labels, and filters for airports, routes, aircraft models, callsigns, and Virtual Airlines. Users can view active ATC frequencies, controller activity, parsed ATIS information, real-world METAR weather, runway wind conditions, featured airports, and detailed flight information such as routes, altitude and speed profiles, flight plans, parking status, and pilot statistics.",
+        imageUrl: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/anothergerman/288/1702052_2.png",
+        tags: ["tracker"],
+        link: "https://waypoint-live.app/",
+        previewImages: ['https://global.discourse-cdn.com/infiniteflight/original/4X/8/1/e/81e7308caeea929147440462414886becee2f2ed.jpeg','https://global.discourse-cdn.com/infiniteflight/optimized/4X/2/3/1/231c2f1beda56988da1994f7295af40a628bd172_2_1640x844.jpeg','https://global.discourse-cdn.com/infiniteflight/original/4X/0/2/4/024fe43f372503ba381faf173c095a65f7e8132f.jpeg', "https://global.discourse-cdn.com/infiniteflight/original/4X/e/0/8/e0806fab4c9a8d41581524aa2dc8a9eb523f5ec3.jpeg", 'https://global.discourse-cdn.com/infiniteflight/original/4X/e/0/8/e0806fab4c9a8d41581524aa2dc8a9eb523f5ec3.jpeg']
+    },
+    // IFATC Companion
+    {
+        id: 87,
+        name: "IFATC Companion App",
+        creator: "William Hahn",
+        description: "IFATC Companion is an iPhone companion app that provides simulated, FAA-style commercial IFR communications while flying Infinite Flight, particularly when no live controllers are available. It follows the flight from gate to gate with Ramp, Ground, Tower, Departure, Center, Approach, Arrival, and Ramp communications, automatically generating calls and controller handoffs based on the aircraft’s position and phase of flight. The app also includes interactive pilot responses, text-to-speech controller voices, route weather with METARs, PIREPs, SIGMETs, ride reports and precipitation overlays, simulated weather deviations, and automatic clearance back to the filed route. A free Mock Mode demonstrates the complete ATC experience without connecting to Infinite Flight, while the subscription-based Live Connected Mode communicates with Infinite Flight through the local Wi-Fi network.",
+        imageUrl: "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ad/3d/3f/ad3d3f42-f1e5-b924-53b7-92edfda93852/Placeholder.mill/400x400bb-75.webp",
+        tags: ["ATC", 'iOS'],
+        link: "https://apps.apple.com/us/app/ifatc-companion/id6785536132"
+    },
+    // IF Step Climber
+    {
+        id: 88,
+        name: "IF Step Climber",
+        creator: "Adhi",
+        description: "IF Step Climber is a helper tool that features automatic VNAV step-climb — flies your vertical profile so you cruise at the right levels, a navigation display with your route, waypoints and holding patterns, SimBrief flight-plan import, live ATC & arrivals info, and more!",
+        imageUrl: "",
+        tags: ['addons',"utility", 'android'],
+        link: "https://adhiii04.github.io/ifstep-climber/"
+    },
 ]
