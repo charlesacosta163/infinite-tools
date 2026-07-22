@@ -887,7 +887,7 @@ export const toolsData = [
         creator: "anothergerman and Team",
         description: "Waypoint is a free live map and radar platform for Infinite Flight that displays real-time traffic across the Expert, Training, and Casual servers. It features aircraft-specific map icons, airline and livery labels, and filters for airports, routes, aircraft models, callsigns, and Virtual Airlines. Users can view active ATC frequencies, controller activity, parsed ATIS information, real-world METAR weather, runway wind conditions, featured airports, and detailed flight information such as routes, altitude and speed profiles, flight plans, parking status, and pilot statistics.",
         imageUrl: "https://sea1.discourse-cdn.com/infiniteflight/user_avatar/community.infiniteflight.com/anothergerman/288/1702052_2.png",
-        tags: ["tracker"],
+        tags: ["tracker", "iOS"],
         link: "https://waypoint-live.app/",
         previewImages: ['https://global.discourse-cdn.com/infiniteflight/original/4X/8/1/e/81e7308caeea929147440462414886becee2f2ed.jpeg','https://global.discourse-cdn.com/infiniteflight/optimized/4X/2/3/1/231c2f1beda56988da1994f7295af40a628bd172_2_1640x844.jpeg','https://global.discourse-cdn.com/infiniteflight/original/4X/0/2/4/024fe43f372503ba381faf173c095a65f7e8132f.jpeg', "https://global.discourse-cdn.com/infiniteflight/original/4X/e/0/8/e0806fab4c9a8d41581524aa2dc8a9eb523f5ec3.jpeg", 'https://global.discourse-cdn.com/infiniteflight/original/4X/e/0/8/e0806fab4c9a8d41581524aa2dc8a9eb523f5ec3.jpeg']
     },
@@ -910,5 +910,15 @@ export const toolsData = [
         imageUrl: "",
         tags: ['addons',"utility", 'android'],
         link: "https://adhiii04.github.io/ifstep-climber/"
+    },
+    // Infinite World Tour
+    {
+        id: 89,
+        name: "Infinite World Tour",
+        creator: "Dalmo_Cabral",
+        description: "Infinite World Tour is your gateway to exploring the virtual world of aviation in the Infinite Flight simulator! Uncover challenges, earn rewards, and connect with a global community.",
+        imageUrl: "",
+        tags: ["addons"],
+        link: "https://worldtourinfinte.vercel.app/"
     },
 ]
